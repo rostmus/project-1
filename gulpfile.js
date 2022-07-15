@@ -1,8 +1,13 @@
 const gulp = require('gulp'),
 sass = require('gulp-sass')(require('sass')),
 browserSync = require('browser-sync'),
-concat = require('gulp-concat')
-rename = require('gulp-rename')
+concat = require('gulp-concat'),
+rename = require('gulp-rename'),
+del = require('del')
+
+gulp.task('clean', function() {
+    return del.sync('dist')
+})
 //css сборка
 gulp.task('sass', function() {
     return gulp.src('app/css/sass/*.sass')
@@ -48,4 +53,4 @@ gulp.task('watch', function() {
     // gulp.task('default', gulp.parallel('sass','html', 'scripts', 'browser-sync','img', 'watch'))
 })
 
-gulp.task('build', gulp.parallel('sass', 'scripts', 'html', 'img', 'browser-sync','watch'))
+gulp.task('build', gulp.parallel('clean', 'sass', 'scripts', 'html', 'img', 'browser-sync','watch'))
