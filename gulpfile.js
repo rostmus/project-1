@@ -10,7 +10,7 @@ gulp.task('clean', function() {
 })
 //css сборка
 gulp.task('sass', function() {
-    return gulp.src('app/css/sass/*.sass')
+    return gulp.src('app/css/sass/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({stream: true}))
@@ -39,14 +39,14 @@ gulp.task('img', function() {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: 'app'
+            baseDir: 'dist'
         },
         notify: false
     })
 })
 //наблюдение за изменениями
 gulp.task('watch', function() {
-    gulp.watch('app/css/**/*.sass', gulp.parallel('sass'))
+    gulp.watch('app/css/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html'), gulp.parallel('html')
     gulp.watch('app/js/*.js'), gulp.parallel('scripts')
     gulp.watch('app/img/**/*'), gulp.parallel('img')
