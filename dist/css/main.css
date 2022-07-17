@@ -1,8 +1,10 @@
 header {
+  margin: 0;
+  text-transform: uppercase;
   position: relative;
   width: 100%;
-  max-width: 1399px;
   background-image: url("/img/banner-bg.jpg");
+  background-size: cover;
   background-color: black;
   color: #ffffff;
   padding: 20px 0px 146px 0px;
@@ -41,14 +43,16 @@ header:after {
 .navigator-upp-items {
   font-size: 13px;
   display: flex;
-  text-transform: uppercase;
   text-decoration: none;
-  list-style-type: none;
 }
 
 .navigator-items__item {
   display: block;
   margin-right: 28px;
+}
+
+.navigator-items__item:hover {
+  text-decoration: underline;
 }
 
 .navigator__title {
@@ -74,7 +78,126 @@ header:after {
   opacity: 0.6;
 }
 
+.body-cap {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.body-cap__title {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 63px;
+}
+
+.body-cap__title::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 66px;
+  background-color: #7e6d3f;
+  margin: 14px auto 25px auto;
+}
+
+.body-cap-items {
+  padding: 0;
+  display: flex;
+}
+
+.body-cap-items > li:nth-child(1n+2) {
+  margin-left: 0.2%;
+}
+
+.item__1 {
+  background-image: url("/img/trend1.jpg");
+}
+
+.item__2 {
+  background-image: url("/img/trend2.jpg");
+}
+
+.item__3 {
+  background-image: url("/img/trend3.jpg");
+}
+
+.item__4 {
+  background-image: url("/img/trend4.jpg");
+}
+
+.body-cap__item {
+  position: relative;
+  background-size: cover;
+  display: block;
+  width: 24.85%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.body-cap__item:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.body-cap__item__content {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  border: 2px solid #7e6d3f;
+  width: 74%;
+  margin: 0 auto 4.4% auto;
+  padding: 8% 35px;
+}
+
+.body-cap__item-tegs {
+  display: flex;
+  color: #7e6d3f;
+  font-size: 14px;
+}
+
+.body-cap__item__teg {
+  margin: 0 15px 15px 0;
+}
+
+.body-cap__item__teg:hover {
+  text-decoration: underline;
+}
+
+.body-cap__item-content__title {
+  color: white;
+  font-size: 20px;
+}
+
+.body-cap__item-content__title:hover {
+  color: #7e6d3f;
+}
+
+.main-box {
+  display: flex;
+}
+
+.body-main {
+  width: 46%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
 }
