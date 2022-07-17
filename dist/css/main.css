@@ -127,7 +127,7 @@ header:after {
   position: relative;
   background-size: cover;
   display: block;
-  width: 24.85%;
+  width: 24.7%;
   height: 320px;
   display: flex;
   flex-direction: column;
@@ -152,9 +152,8 @@ header:after {
   z-index: 2;
   box-sizing: border-box;
   border: 2px solid #7e6d3f;
-  width: 74%;
-  margin: 0 auto 4.4% auto;
-  padding: 8% 35px;
+  margin: 0 4.6% 4.6% 4.6%;
+  padding: 8.5%;
 }
 
 .body-cap__item-tegs {
@@ -180,24 +179,251 @@ header:after {
   color: #7e6d3f;
 }
 
-.main-box {
+.body-main {
+  width: 65%;
+}
+
+.body-main-items > li:nth-child(1n+2) {
+  margin-top: 58px;
+}
+
+.body-main__item {
   display: flex;
 }
 
-.body-main {
-  width: 46%;
+.body-main__item__img {
+  width: 50%;
+}
+
+.body-main__item-content {
+  margin-left: 32px;
+  width: 50%;
+}
+
+.body-main__item-tags {
+  display: flex;
+  color: #7e6d3f;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.body-main__item__tag {
+  margin: 0 15px 14px 0;
+}
+
+.body-main__item__tag:hover {
+  text-decoration: underline;
+}
+
+.body-main__item__title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.body-main__item__title:hover {
+  color: #7e6d3f;
+}
+
+.body-main__item__info {
+  margin: 38px 0 54px 0;
+  display: flex;
+}
+
+.body-main__item__date {
+  font-size: 12px;
+  color: #888888;
+  margin-right: 14px;
+}
+
+.body-main__item__author {
+  font-size: 12px;
+}
+
+.body-main__item__text {
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(/dist/);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+.body-add {
+  width: 32%;
+  margin-left: 6%;
+}
+
+.body-add__title,
+.body-add-mailing__title,
+.body-add-tags__title,
+.body-add-themes__title {
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.body-add__title::after,
+.body-add-mailing__title::after,
+.body-add-tags__title::after,
+.body-add-themes__title::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 66px;
+  background-color: #7e6d3f;
+  margin: 15px auto 0 auto;
+}
+
+.body-add-posts {
+  width: 100%;
+}
+
+.body-add-posts > li:nth-child(1n+2) {
+  margin-top: 21px;
+}
+
+.body-add__post {
+  display: flex;
+}
+
+.body-add__post__content {
+  margin-left: 21px;
+}
+
+.body-add__post__date {
+  font-size: 12px;
+  color: #888888;
+  margin: 0 14px 6px 0;
+}
+
+.body-add__post__title {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.body-add-find {
+  display: flex;
+  margin: 61px 0 61px 0;
+}
+
+.body-add-find__input {
+  width: 222px;
+  padding: 18px;
+  height: 48px;
+  border: none;
+  background-color: #f4f7f6;
+  font-size: 13px;
+}
+
+.body-add-find__button {
+  width: 48px;
+  height: 48px;
+  background-color: #b59f5b;
+  cursor: pointer;
+}
+
+.body-add-find__button:hover {
+  background-color: #323232;
+}
+
+.body-add-find__button__svg {
+  margin: 15px;
+}
+
+.body-add-find__input:focus {
+  outline: none;
+}
+
+.body-add-mailing__box {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-add-mailing__input {
+  border: none;
+  background-color: #f4f7f6;
+  padding: 18px;
+  height: 48px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.body-add-mailing__input:focus {
+  outline: none;
+  border-bottom: 1px solid #b59f5b;
+}
+
+.body-add-mailing__button {
+  margin-top: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 18px;
+  height: 48px;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  background-color: #b59f5b;
+}
+
+.body-add-mailing__button:hover {
+  background-color: #323232;
+}
+
+.body-add-tags__title {
+  margin-top: 61px;
+}
+
+.body-add-tags__list {
+  width: 271px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.body-add__tag {
+  border: 3px solid #eeeeee;
+  margin: 0 5px 5px 0;
+  padding: 8px 14px;
+}
+
+.body-add-themes__title {
+  margin-top: 61px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p, ul {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: OpenSans;
+  margin: 0;
+}
+
+.main-box {
+  display: flex;
+  max-width: 1170px;
+  margin: 64px auto 0 auto;
 }

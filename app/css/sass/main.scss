@@ -1,17 +1,32 @@
 @import 'header';
 @import 'bodycap';
 @import 'bodyMain';
-
+@import 'fonts';
+@import 'bodyadd';
 
 a {
     text-decoration: none;
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 li {
     list-style-type: none;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p, ul {
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: OpenSans;
+    margin: 0;
+}
+.main-box {
+    display: flex;
+    max-width: 1170px;
+    margin: 64px auto 0 auto;
+}
+
+

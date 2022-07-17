@@ -1,0 +1,147 @@
+.body-add {
+    width: 32%;
+    margin-left: 6%;
+}
+
+.body-add__title,
+.body-add-mailing__title,
+.body-add-tags__title,
+.body-add-themes__title {
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+.body-add__title::after,
+.body-add-mailing__title::after,
+.body-add-tags__title::after,
+.body-add-themes__title::after {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 66px;
+    background-color: #7e6d3f;
+    margin: 15px auto 0 auto;
+
+}
+
+.body-add-posts {
+    width: 100%;
+}
+
+
+.body-add-posts>li:nth-child(1n+2) {
+    margin-top: 21px;
+}
+
+.body-add__post {
+    display: flex;
+}
+
+.body-add__post__content {
+    margin-left: 21px;
+}
+
+.body-add__post__date {
+    font-size: 12px;
+    color: #888888;
+    margin: 0 14px 6px 0;
+}
+
+.body-add__post__title {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.body-add-find {
+    display: flex;
+    margin: 61px 0 61px 0;
+}
+
+.body-add-find__input {
+    width: 222px;
+    padding: 18px;
+    height: 48px;
+    border: none;
+    background-color: #f4f7f6;
+    font-size: 13px;
+}
+
+.body-add-find__button {
+    width: 48px;
+    height: 48px;
+    background-color: #b59f5b;
+    cursor: pointer;
+}
+
+.body-add-find__button:hover {
+    background-color: #323232;
+}
+
+.body-add-find__button__svg {
+    margin: 15px;
+}
+
+.body-add-find__input:focus {
+    outline: none;
+}
+
+.body-add-mailing__box {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-add-mailing__input {
+    border: none;
+    background-color: #f4f7f6;
+    padding: 18px;
+    height: 48px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.body-add-mailing__input:focus {
+    outline: none;
+    border-bottom: 1px solid #b59f5b;
+}
+
+.body-add-mailing__button {
+    margin-top: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 18px;
+    height: 48px;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    background-color: #b59f5b;
+}
+
+.body-add-mailing__button:hover {
+    background-color: #323232;
+}
+
+.body-add-tags__title {
+    margin-top: 61px;
+}
+
+.body-add-tags__list {
+    width: 271px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.body-add__tag {
+    border: 3px solid #eeeeee;
+    margin: 0 5px 5px 0;
+    padding: 8px 14px;
+}
+
+.body-add-themes__title {
+    margin-top: 61px;
+}
