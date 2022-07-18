@@ -1,6 +1,6 @@
 .body-add {
     width: 32%;
-    margin-left: 6%;
+    margin-left: 100px;
 }
 
 .body-add__title,
@@ -22,7 +22,7 @@
     content: '';
     height: 3px;
     width: 66px;
-    background-color: #7e6d3f;
+    background-color: $color-line;
     margin: 15px auto 0 auto;
 
 }
@@ -46,7 +46,7 @@
 
 .body-add__post__date {
     font-size: 12px;
-    color: #888888;
+    color: $color-font;
     margin: 0 14px 6px 0;
 }
 
@@ -57,7 +57,7 @@
 
 .body-add-find {
     height: 48px;
-    margin: 100%;
+    margin: 61px;
     display: flex;
     margin: 61px 0 61px 0;
 }
@@ -68,26 +68,26 @@
     padding: 18px;
     height: 48px;
     border: none;
-    background-color: #f4f7f6;
+    background-color: $color-input-body;
     font-size: 13px;
 }
 
 .body-add-find__button {
     width: 16%;
     height: 100%;
-    background-color: #b59f5b;
+    background-color: $color-tag;
     cursor: pointer;
+
 }
 
 .body-add-find__button:hover {
-    background-color: #323232;
+    background-color: $color-hover;
 }
 
 .body-add-find__button__svg {
-    background-position: center;
     height: 50%;
     width: 50%;
-    padding: 25%;
+    margin: 23%;
 }
 
 .body-add-find__input:focus {
@@ -102,7 +102,7 @@
 
 .body-add-mailing__input {
     border: none;
-    background-color: #f4f7f6;
+    background-color: $color-input-body;
     padding: 18px;
     height: 48px;
     font-size: 13px;
@@ -111,16 +111,9 @@
 
 .body-add-mailing__input:focus {
     outline: none;
-    border-bottom: 1px solid #b59f5b;
+    border-bottom: 1px solid $color-tag;
 }
-// .body-add-find__input:focus::after {
-//     content: '';
-//     height: 5px;
-//     background-color: #7e6d3f;
-//     display: block;
-//     margin: 3px auto 0 auto;
-//     width: 270px;
-// }
+
 
 
 .body-add-mailing__button {
@@ -132,11 +125,11 @@
     box-sizing: border-box;
     border: none;
     color: white;
-    background-color: #b59f5b;
+    background-color: $color-tag;
 }
 
 .body-add-mailing__button:hover {
-    background-color: #323232;
+    background-color: $color-hover;
 }
 
 .body-add-tags__title {
@@ -152,7 +145,7 @@
 }
 
 .body-add__tag {
-    border: 3px solid #eeeeee;
+    border: 3px solid $color-border-tag;
     margin: 0 5px 5px 0;
     padding: 8px 14px;
 }
@@ -167,14 +160,14 @@
     margin: 0 0 36px 0;
 }
 .body-add-themes__item:hover {
-    color: #b59f5b;
+    color: $color-tag;
 }
 
 .body-add-themes__item::after {
     content: "";
     height: 1px;
     margin: 10px auto 0 auto;
-    background-color: #eeeeee;
+    background-color: $color-border-tag;
     display: block;
     width: 100%;
 
@@ -184,5 +177,5 @@
     font-size: 12px;
     vertical-align: top;
     margin-left: 15px;
-    color: #b59f5b;
+    color: $color-tag;
 }

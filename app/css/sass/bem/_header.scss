@@ -6,7 +6,7 @@ header {
     background-image: url('/img/banner-bg.jpg');
     background-size: cover;
     background-color: black;
-    color: #ffffff;
+    color: $font-white;
     padding: 20px 0px 146px 0px;
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
         background-image: url('/img/banner-bg-tablet.jpg');
@@ -59,25 +59,25 @@ header:after {
     }
 }
 
-.navigator-items__svg {
+.navigator-upp-items__svg {
     display: none;
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
         display: block;
         width: 25px;
-        fill: white;
+        fill: $font-white;
         cursor: pointer;
     }
 
 }
 
-.navigator-items__item {
+.navigator-upp-items__item {
     display: block;
     margin-right: 28px;
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
         display: none;
     }
 }
-.navigator-items__item:hover {
+.navigator-upp-items__item:hover {
     text-decoration: underline;
 }
 
