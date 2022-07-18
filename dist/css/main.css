@@ -29,18 +29,19 @@ header:after {
 }
 
 .navigator-upp {
-  width: 1170px;
+  width: 71%;
   margin: 0px auto 0 auto;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 
 .navigator-upp__logo {
-  width: 183px;
+  width: 16%;
 }
 
 .navigator-upp-items {
+  width: 34%;
   font-size: 13px;
   display: flex;
   text-decoration: none;
@@ -57,7 +58,7 @@ header:after {
 
 .navigator__title {
   display: block;
-  width: 575px;
+  width: 36%;
   font-size: 45px;
   margin-top: 120px;
   margin-left: auto;
@@ -245,13 +246,13 @@ header:after {
 
 @font-face {
   font-family: OpenSans;
-  src: url(/dist/);
+  src: url(/dist/fonts/OpenSans-Regular.woff);
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: OpenSans;
-  src: url("../fonts/OpenSans-Bold.woff");
+  src: url("/dist/fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -311,12 +312,15 @@ header:after {
 }
 
 .body-add-find {
+  height: 48px;
+  margin: 100%;
   display: flex;
   margin: 61px 0 61px 0;
 }
 
 .body-add-find__input {
-  width: 222px;
+  box-sizing: border-box;
+  width: 84%;
   padding: 18px;
   height: 48px;
   border: none;
@@ -325,8 +329,8 @@ header:after {
 }
 
 .body-add-find__button {
-  width: 48px;
-  height: 48px;
+  width: 16%;
+  height: 100%;
   background-color: #b59f5b;
   cursor: pointer;
 }
@@ -336,7 +340,10 @@ header:after {
 }
 
 .body-add-find__button__svg {
-  margin: 15px;
+  background-position: center;
+  height: 50%;
+  width: 50%;
+  padding: 25%;
 }
 
 .body-add-find__input:focus {
@@ -344,7 +351,7 @@ header:after {
 }
 
 .body-add-mailing__box {
-  width: 270px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -401,6 +408,156 @@ header:after {
   margin-top: 61px;
 }
 
+.body-add-themes__item {
+  font-size: 14px;
+  margin: 0 0 36px 0;
+}
+
+.body-add-themes__item:hover {
+  color: #b59f5b;
+}
+
+.body-add-themes__item::after {
+  content: "";
+  height: 1px;
+  margin: 10px auto 0 auto;
+  background-color: #eeeeee;
+  display: block;
+  width: 100%;
+}
+
+.body-add-themes__item__number {
+  font-size: 12px;
+  vertical-align: top;
+  margin-left: 15px;
+  color: #b59f5b;
+}
+
+.products {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 0 auto;
+}
+
+.products__title {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  text-transform: uppercase;
+}
+
+.products__title:after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 66px;
+  background-color: #7e6d3f;
+  margin: 14px auto 25px auto;
+}
+
+.products-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.products__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  align-items: center;
+}
+
+.products__item__img,
+.products__item__img > img {
+  width: 100%;
+}
+
+.products__item__content {
+  margin-top: -28px;
+  width: 100%;
+  border: 3px solid #d3c59d;
+  padding: 55px 20px;
+}
+
+.products__item__title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.products__item__text {
+  font-size: 15px;
+  margin: 13px 0 28px 0;
+}
+
+.products__item__text > a {
+  color: #b59f5b;
+}
+
+.products__item__text > a:hover {
+  text-decoration: underline;
+}
+
+.products__item__purchasing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products__item__price__false {
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.products__item__price {
+  font-weight: 700;
+}
+
+.products__item__button {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 19px 30px;
+  background-color: #b59f5b;
+  cursor: pointer;
+}
+
+.products__item__button:hover {
+  background-color: #323232;
+}
+
+.network {
+  max-width: 1170px;
+  background-color: #f4f7f6;
+  margin: 62px auto 62px auto;
+}
+
+.network__items {
+  padding: 33px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.network__items > li:nth-child(1n+2) {
+  margin-left: 33px;
+}
+
+.network__svg {
+  width: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #a1a1a1;
+  margin-bottom: 62px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -426,4 +583,8 @@ body {
   display: flex;
   max-width: 1170px;
   margin: 64px auto 0 auto;
+}
+
+footer {
+  margin-top: 62px;
 }

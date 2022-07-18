@@ -4,7 +4,7 @@ browserSync = require('browser-sync'),
 concat = require('gulp-concat'),
 rename = require('gulp-rename'),
 del = require('del')
-
+//очистка
 gulp.task('clean', function() {
     return del.sync('dist')
 })

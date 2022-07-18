@@ -1,0 +1,116 @@
+.products {
+width: 100%;
+    max-width: 1170px;
+    margin: 0 auto 0 auto;
+}
+.products__title {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    text-transform: uppercase ;
+}
+
+.products__title:after {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 66px;
+    background-color: #7e6d3f;
+    margin: 14px auto 25px auto;
+}
+
+.products-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.products__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    align-items: center;
+}
+.products__item__img,
+.products__item__img>img {
+    width: 100%;
+}
+.products__item__content {
+    margin-top: -28px;
+    width: 100%;
+    border: 3px solid #d3c59d;
+    padding: 55px 20px;
+}
+
+
+
+.products__item__title {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.products__item__text {
+    font-size: 15px;
+    margin: 13px 0 28px 0;
+}
+.products__item__text>a {
+    color:#b59f5b;
+}
+.products__item__text>a:hover {
+    text-decoration: underline;
+}
+
+.products__item__purchasing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products__item__price__false {
+    text-decoration: line-through;
+    font-weight: 700;
+}
+.products__item__price {
+    font-weight: 700;
+}
+.products__item__button {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 19px 30px;
+    background-color: #b59f5b;
+    cursor: pointer;
+}
+.products__item__button:hover {
+background-color: #323232;
+}
+
+.network {
+    max-width: 1170px;
+    background-color: #f4f7f6;
+    margin: 62px auto 62px auto;
+}
+
+.network__items {
+    padding: 33px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.network__items>li:nth-child(1n+2) {
+    margin-left: 33px;
+}
+.network__svg {
+    width: 20px;
+    color: black;
+    cursor: pointer;
+
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #a1a1a1;
+    margin-bottom: 62px;
+}

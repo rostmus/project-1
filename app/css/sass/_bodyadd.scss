@@ -56,12 +56,15 @@
 }
 
 .body-add-find {
+    height: 48px;
+    margin: 100%;
     display: flex;
     margin: 61px 0 61px 0;
 }
 
 .body-add-find__input {
-    width: 222px;
+    box-sizing: border-box;
+    width: 84%;
     padding: 18px;
     height: 48px;
     border: none;
@@ -70,8 +73,8 @@
 }
 
 .body-add-find__button {
-    width: 48px;
-    height: 48px;
+    width: 16%;
+    height: 100%;
     background-color: #b59f5b;
     cursor: pointer;
 }
@@ -81,7 +84,10 @@
 }
 
 .body-add-find__button__svg {
-    margin: 15px;
+    background-position: center;
+    height: 50%;
+    width: 50%;
+    padding: 25%;
 }
 
 .body-add-find__input:focus {
@@ -89,7 +95,7 @@
 }
 
 .body-add-mailing__box {
-    width: 270px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -107,6 +113,15 @@
     outline: none;
     border-bottom: 1px solid #b59f5b;
 }
+// .body-add-find__input:focus::after {
+//     content: '';
+//     height: 5px;
+//     background-color: #7e6d3f;
+//     display: block;
+//     margin: 3px auto 0 auto;
+//     width: 270px;
+// }
+
 
 .body-add-mailing__button {
     margin-top: 18px;
@@ -142,6 +157,32 @@
     padding: 8px 14px;
 }
 
+
 .body-add-themes__title {
     margin-top: 61px;
+}
+
+.body-add-themes__item {
+    font-size: 14px;
+    margin: 0 0 36px 0;
+}
+.body-add-themes__item:hover {
+    color: #b59f5b;
+}
+
+.body-add-themes__item::after {
+    content: "";
+    height: 1px;
+    margin: 10px auto 0 auto;
+    background-color: #eeeeee;
+    display: block;
+    width: 100%;
+
+}
+
+.body-add-themes__item__number {
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 15px;
+    color: #b59f5b;
 }
