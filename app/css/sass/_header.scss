@@ -8,6 +8,9 @@ header {
     background-color: black;
     color: #ffffff;
     padding: 20px 0px 146px 0px;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        background-image: url('/img/banner-bg-tablet.jpg');
+    }
 }
 
 header:after {
@@ -34,10 +37,16 @@ header:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 91%;
+    }
 }
 
 .navigator-upp__logo {
     width: 16%;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 22%;
+    }
 }
 
 .navigator-upp-items {
@@ -45,11 +54,28 @@ header:after {
     font-size: 13px;
     display: flex;
     text-decoration: none;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 24px;
+    }
+}
+
+.navigator-items__svg {
+    display: none;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        display: block;
+        width: 25px;
+        fill: white;
+        cursor: pointer;
+    }
+
 }
 
 .navigator-items__item {
     display: block;
     margin-right: 28px;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        display: none;
+    }
 }
 .navigator-items__item:hover {
     text-decoration: underline;
@@ -63,6 +89,11 @@ header:after {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        font-size: 40px;
+        margin-top: 108px;
+        width: 67%;
+    }
 }
 
 header:after {

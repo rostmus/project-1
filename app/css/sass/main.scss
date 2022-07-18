@@ -1,9 +1,12 @@
+@import 'variables';
 @import 'header';
 @import 'bodycap';
 @import 'bodyMain';
 @import 'fonts';
 @import 'bodyadd';
 @import 'products';
+
+
 a {
     text-decoration: none;
     color: inherit;
@@ -27,6 +30,9 @@ body{
     display: flex;
     max-width: 1170px;
     margin: 64px auto 0 auto;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 91%;
+    }
 }
 footer {
     margin-top: 62px;
