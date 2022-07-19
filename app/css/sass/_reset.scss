@@ -1,9 +1,4 @@
-/* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 a {
     text-decoration: none;
@@ -12,9 +7,6 @@ a {
     padding: 0;
 }
 
-li {
-    list-style-type: none;
-}
 h1, h2, h3, h4, p, ul {
     margin: 0;
     padding: 0;

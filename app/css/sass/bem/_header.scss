@@ -1,5 +1,5 @@
 header {
-    margin:0;
+    margin: 0;
     text-transform: uppercase;
     position: relative;
     width: 100%;
@@ -8,8 +8,13 @@ header {
     background-color: black;
     color: $font-white;
     padding: 20px 0px 146px 0px;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         background-image: url('/img/banner-bg-tablet.jpg');
+    }
+
+    @media (max-width: $mobile-max) {
+        background-image: url('/img/banner-mobile.jpg');
     }
 }
 
@@ -29,6 +34,10 @@ header:after {
 .navigator {
     position: relative;
     z-index: 2;
+    @media (max-width: $mobile-max) {
+        width: 91%;
+        margin: auto;
+    }
 }
 
 .navigator-upp {
@@ -37,15 +46,29 @@ header:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: 91%;
+    }
+
+    @media (max-width: $mobile-max) {
+        width: 100%;
+        flex-direction: column;
     }
 }
 
 .navigator-upp__logo {
     width: 16%;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: 22%;
+    }
+
+    @media (max-width: $mobile-max) {
+        order: 2;
+        width: 81.2%;
+        margin: 186px auto 0 auto;
+
     }
 }
 
@@ -54,14 +77,26 @@ header:after {
     font-size: 13px;
     display: flex;
     text-decoration: none;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 24px;
+    }
+    @media (max-width: $mobile-max) {
+        align-self: flex-end;
         width: 24px;
     }
 }
 
 .navigator-upp-items__svg {
     display: none;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        display: block;
+        width: 25px;
+        fill: $font-white;
+        cursor: pointer;
+    }
+    @media (max-width: $mobile-max) {
         display: block;
         width: 25px;
         fill: $font-white;
@@ -73,10 +108,13 @@ header:after {
 .navigator-upp-items__item {
     display: block;
     margin-right: 28px;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+    transition: all 0.3s linear;
+
+    @media (max-width: $tablet-max) {
         display: none;
     }
 }
+
 .navigator-upp-items__item:hover {
     text-decoration: underline;
 }
@@ -89,10 +127,16 @@ header:after {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         font-size: 40px;
         margin-top: 108px;
         width: 67%;
+    }
+    @media (max-width: $mobile-max) {
+        font-size: 26px;
+        width: 100%;
+        margin-top: 42px;
     }
 }
 

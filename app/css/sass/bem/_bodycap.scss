@@ -12,6 +12,10 @@
         font-size: 18px;
         margin-top: 52px;
     }
+    @media (max-width: $mobile-max) {
+        font-size: 16px;
+        margin-top: 40px;
+    }
 
 }
 
@@ -22,12 +26,15 @@
     width: 66px;
     background-color: $color-line;
     margin: 14px auto 25px auto;
+    @media (max-width: $mobile-max) {
+        margin: 10px auto 22px auto;
+    }
 }
 
 .body-cap-items {
     padding: 0;
     display: flex;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+    @media (max-width: $tablet-max) {
         flex-wrap: wrap;
     }
 }
@@ -35,14 +42,17 @@
 .body-cap-items>li:nth-child(1n+2) {
     margin-left: 3px;
     background-size: cover;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+    @media (max-width: $tablet-max) {
         margin: 0;
-    }
+    } 
 }
 
 .body-cap-items>li:nth-child(even) {
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
-        margin-left: 7px;
+        margin-left: 1%;
+    }
+    @media (max-width: $mobile-max) {
+        margin: 0;
     }
 }
 
@@ -55,6 +65,11 @@
 .body-cap-items>li:nth-child(2) {
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
         margin-bottom: 7px;
+    }
+}
+.body-cap-items>li:nth-child(1n) {
+    @media (max-width: $mobile-max) {
+        margin-bottom: 2px;
     }
 }
 
@@ -78,15 +93,22 @@
     position: relative;
     background-size: cover;
     display: block;
-    width: 24.8%;
+    width: 48%;
     height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
         width: 49.5%;
+        height: 248px;
+    }
+    @media (max-width: $mobile-max) {
+       width: 100%;
+       height: 230px;
     }
 }
+
+
 .body-cap-items__item:after {
     width: 100%;
     height: 100%;
@@ -119,6 +141,7 @@
 
 .body-cap-items__item-teg {
     margin: 0 15px 15px 0;
+    transition: all 0.4s linear;
 }
 
 .body-cap-items__item-teg:hover {
@@ -128,11 +151,11 @@
 .body-cap-items__item-title {
     color:$font-white;
     font-size: 20px;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
-        font-size: 17px;
+    transition: all 0.3s linear;
+    @media (max-width: $tablet-max) {
+        font-size: 16px;
     }
-    
 }
 .body-cap-items__item-title:hover {
-    color:$color-line;
+    color:$color-tag-cup;
 }

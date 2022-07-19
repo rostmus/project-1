@@ -1,6 +1,14 @@
 .body-add {
     width: 32%;
     margin-left: 100px;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 39%;
+        margin-left: 38px
+    }
+    @media (max-width: $mobile-max) {
+        width: 91%;
+        margin: 42px auto 0 auto;
+    }
 }
 
 .body-add__title,
@@ -37,11 +45,31 @@
 }
 
 .body-add__post {
+    width: 100%;
     display: flex;
 }
+.body-add__post__img {
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 25.7%;
+    }
+    @media (max-width: $mobile-max) {
+        width: 21%;
+    }
+}
 
+.body-add__post__img>img {
+    @media (max-width: $mobile-max) {
+        width: 100%; 
+    }
+}
 .body-add__post__content {
     margin-left: 21px;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 74.3%;
+    }
+    @media (max-width: $mobile-max) {
+        width: 78%; 
+    }
 }
 
 .body-add__post__date {
@@ -60,6 +88,9 @@
     margin: 61px;
     display: flex;
     margin: 61px 0 61px 0;
+    @media (max-width: $mobile-max) {
+        margin: 40px 0 40px 0;
+    }
 }
 
 .body-add-find__input {
@@ -70,6 +101,7 @@
     border: none;
     background-color: $color-input-body;
     font-size: 13px;
+    
 }
 
 .body-add-find__button {
@@ -77,6 +109,7 @@
     height: 100%;
     background-color: $color-tag;
     cursor: pointer;
+    transition: all 0.4s linear;
 
 }
 
@@ -126,14 +159,27 @@
     border: none;
     color: white;
     background-color: $color-tag;
+    transition: all 0.4s linear;
 }
 
 .body-add-mailing__button:hover {
     background-color: $color-hover;
 }
 
+.body-add-tags {
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 100%;
+    }
+}
+
 .body-add-tags__title {
     margin-top: 61px;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        margin-top: 52px;
+    }
+    @media (max-width: $mobile-max) {
+        margin-top:40px; 
+    }
 }
 
 .body-add-tags__list {
@@ -142,6 +188,9 @@
     flex-wrap: wrap;
     font-size: 12px;
     text-transform: uppercase;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 100%;
+    }
 }
 
 .body-add__tag {
@@ -153,11 +202,18 @@
 
 .body-add-themes__title {
     margin-top: 61px;
+    @media (max-width: $mobile-max) {
+        margin-top: 40px;
+    }
 }
 
 .body-add-themes__item {
     font-size: 14px;
     margin: 0 0 36px 0;
+    transition: all 0.4s linear;
+    @media (max-width: $mobile-max) {
+        margin-bottom: 20px;
+    }
 }
 .body-add-themes__item:hover {
     color: $color-tag;
