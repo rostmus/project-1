@@ -1,0 +1,10 @@
+.content > article,
+.content > div {
+    margin-top: 62px;
+@media (max-width: $tablet-max) {
+    margin-top: 52px;
+}
+@media (max-width: $mobile-max) {
+    margin-top: 42px;
+}
+}

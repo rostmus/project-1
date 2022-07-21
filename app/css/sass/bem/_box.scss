@@ -1,0 +1,17 @@
+.box {
+    display: flex;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 91%;
+    }
+
+    @media (max-width: $mobile-max) {
+        width: 92%;
+        margin-top: 42px;
+        flex-direction: column;
+    }
+}
+
+

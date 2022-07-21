@@ -1,0 +1,40 @@
+.sidebar-tags__title {
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sidebar-tags__title::after {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 66px;
+    background-color: $color-line;
+    margin: 15px auto 29px;
+
+}
+
+
+.sidebar-tags {
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 100%;
+    }
+}
+
+.sidebar-tags__list {
+    width: 271px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+        width: 100%;
+    }
+}
+
+.sidebar-tags__tag {
+    border: 3px solid $color-border-tag;
+    margin: 0 5px 5px 0;
+    padding: 8px 14px;
+}
