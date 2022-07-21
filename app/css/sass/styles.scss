@@ -1,10 +1,19 @@
 @import 'variables';
-@import 'bem/bodyadd';
-@import 'bem/bodycap';
-@import 'bem/bodymain';
-@import 'bem/header';
-@import 'bem/products';
 @import 'fonts';
 @import 'reset';
 @import 'main';
+@import 'bem/header';
+@import 'bem/content';
+@import 'bem/sidebar-posts';
+@import 'bem/cap';
+@import 'bem/main__previews';
+@import 'bem/navigator';
+@import 'bem/products';
 @import 'bem/footer';
+@import 'bem/box';
+@import 'bem/sidebar';
+@import 'bem/sidebar-themes';
+@import 'bem/sidebar-find';
+@import 'bem/sidebar-mailing';
+@import 'bem/sidebar-tags';
+

@@ -1,6 +1,5 @@
 .products {
-    width: 100%;
-    max-width: 1170px;
+    width: 91%;
     margin: 0 auto 0 auto;
     @media (max-width: $tablet-max) {
         width: 91%;
@@ -32,7 +31,7 @@
         flex-wrap: wrap;
     }
 }
-.products-items>li:nth-child(1n+2) {
+.products-items > li:nth-child(1n+2) {
     margin-left: 9.5%;
     @media (max-width: $tablet-max) {
         margin-left: 0;
@@ -41,13 +40,13 @@
         margin-left: auto;
     }
 }
-.products-items>li:nth-child(even) {
+.products-items > li:nth-child(even) {
     margin-left: 10%;
     @media (max-width: $mobile-max) {
         margin-left: auto;
     }
 }
-.products__item {
+.products-items-item {
     display: flex;
     flex-direction: column;
     width: 27%;
@@ -62,7 +61,7 @@
     }
 }
 
-.products__item__img{
+.products-items-item__img{
     width: 100%;
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         margin: 0 auto 0 auto;
@@ -70,14 +69,14 @@
     }
 }
 
-.products__item__img>picture>img {
+.products-items-item__img > picture > img {
     width: 100%;
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: 100%;
     }
 }
 
-.products__item__content {
+.products-items-item__content {
     margin-top: -28px;
     width: 100%;
     border: 3px solid $color-border;
@@ -89,7 +88,7 @@
 
 
 
-.products__item__title {
+.products-items-item__title {
     font-size: 20px;
     text-transform: uppercase;
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -97,36 +96,36 @@
     }
 }
 
-.products__item__text {
+.products-items-item__text {
     font-size: 15px;
     margin: 13px 0 28px 0;
 }
 
-.products__item__text>a {
+.products-items-item__text > a {
     color: $color-border;
     transition: all 0.3s linear;
 }
 
-.products__item__text>a:hover {
+.products-items-item__text > a:hover {
     text-decoration: underline;
 }
 
-.products__item__purchasing {
+.products-items-item__purchasing {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.products__item__price__false {
+.products-items-item__price--false {
     text-decoration: line-through;
     font-weight: 700;
 }
 
-.products__item__price {
+.products-items-item__price {
     font-weight: 700;
 }
 
-.products__item__button {
+.products-items-item__button {
     color: white;
     font-size: 14px;
     text-transform: uppercase;
@@ -136,6 +135,6 @@
     transition: all 0.3s linear;
 }
 
-.products__item__button:hover {
+.products-items-item__button:hover {
     background-color: $color-hover;
 }
