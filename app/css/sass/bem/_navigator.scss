@@ -38,7 +38,6 @@
             font-size: 13px;
             display: flex;
             text-decoration: none;
-        
             @media (min-width: $tablet-min) and (max-width: $tablet-max) {
                 width: 24px;
             }
@@ -51,7 +50,6 @@
                 display: block;
                 margin-right: 28px;
                 transition: all 0.3s linear;
-            
                 @media (max-width: $tablet-max) {
                     display: none;
                 }
@@ -63,7 +61,6 @@
 
         &__sandwich {
             display: none;
-        
             @media (min-width: $tablet-min) and (max-width: $tablet-max) {
                 display: block;
                 width: 25px;
@@ -88,7 +85,6 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-    
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
             font-size: 40px;
             margin-top: 108px;

@@ -1,46 +1,59 @@
-.sidebar-themes__title {
-    width: 100%;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 29px;
-}
+.sidebar-themes {
 
-.sidebar-themes__title::after {
-    display: block;
-    content: '';
-    height: 3px;
-    width: 66px;
-    background-color: $color-line;
-    margin: 15px auto 0 auto;
+   &__title {
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 29px;
 
-}
+        &::after {
+            display: block;
+            content: '';
+            height: 3px;
+            width: 66px;
+            background-color: $color-line;
+            margin: 15px auto 0 auto;
+        }
 
-.sidebar-themes__item {
-    font-size: 14px;
-    margin: 0 0 36px 0;
-    transition: all 0.4s linear;
-    @media (max-width: $mobile-max) {
-        margin-bottom: 20px;
+        &::after {
+            display: block;
+            content: '';
+            height: 3px;
+            width: 66px;
+            background-color: $color-line;
+            margin: 15px auto 0 auto;
+        
+        }
     }
-}
-.sidebar-themes__item:hover {
-    color: $color-tag;
-}
 
-.sidebar-themes__item::after {
-    content: "";
-    height: 1px;
-    margin: 10px auto 0 auto;
-    background-color: $color-border-tag;
-    display: block;
-    width: 100%;
+    &-item {
+        font-size: 14px;
+        margin: 0 0 36px 0;
+        transition: all 0.4s linear;
+        @media (max-width: $mobile-max) {
+            margin-bottom: 20px;
+        }
 
-}
+        &:hover {
+            color: $color-tag;
+        }
 
-.sidebar-themes__number {
-    font-size: 12px;
-    vertical-align: top;
-    margin-left: 15px;
-    color: $color-tag;
+        &::after {
+            content: "";
+            height: 1px;
+            margin: 10px auto 0 auto;
+            background-color: $color-border-tag;
+            display: block;
+            width: 100%;
+        
+        }
+
+       &__number {
+            font-size: 12px;
+            vertical-align: top;
+            margin-left: 15px;
+            color: $color-tag;
+        }
+    }
 }

@@ -4,38 +4,37 @@
     @media (max-width: $mobile-max) {
         margin: 40px 0 40px 0;
     }
-}
 
-.sidebar-find__input {
-    box-sizing: border-box;
-    width: 84%;
-    padding: 18px;
-    height: 48px;
-    border: none;
-    background-color: $color-input-body;
-    font-size: 13px;
-    
-}
+    &__input {
+        box-sizing: border-box;
+        width: 84%;
+        padding: 18px;
+        height: 48px;
+        border: none;
+        background-color: $color-input-body;
+        font-size: 13px;
+    }
 
-.sidebar-find__button {
-    width: 16%;
-    height: 100%;
-    background-color: $color-tag;
-    cursor: pointer;
-    transition: all 0.4s linear;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    &__input:focus {
+        outline: none;
+    }
 
-.sidebar-find__button:hover {
-    background-color: $color-hover;
-}
+    &__button {
+        width: 16%;
+        height: 100%;
+        background-color: $color-tag;
+        cursor: pointer;
+        transition: all 0.4s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.sidebar-find__svg {
-    width: 50%;
-}
+    &__button:hover {
+        background-color: $color-hover;
+    }
 
-.sidebar-find__input:focus {
-    outline: none;
+    &__svg {
+        width: 50%;
+    }
 }

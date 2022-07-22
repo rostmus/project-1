@@ -12,19 +12,19 @@
             font-size: 16px;
             margin-top: 40px;
         }
-    
-    }
 
-    &__title::after {
-        display: block;
-        content: '';
-        height: 3px;
-        width: 66px;
-        background-color: $color-line;
-        margin: 14px auto 25px auto;
-        @media (max-width: $mobile-max) {
-            margin: 10px auto 22px auto;
+        &::after {
+            display: block;
+            content: '';
+            height: 3px;
+            width: 66px;
+            background-color: $color-line;
+            margin: 14px auto 25px auto;
+            @media (max-width: $mobile-max) {
+                margin: 10px auto 22px auto;
+            }
         }
+    
     }
     
     &-items {

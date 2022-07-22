@@ -1,62 +1,60 @@
-.sidebar-posts__title {
-    width: 100%;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-
-}
-
-.sidebar-posts__title::after {
-    display: block;
-    content: '';
-    height: 3px;
-    width: 66px;
-    background-color: $color-line;
-    margin: 15px auto 0 auto;
-
-}
-
 .sidebar-posts {
     width: 100%;
-}
 
-
-.sidebar-posts > .sidebar-posts__post:nth-child(1n+2) {
-    margin-top: 21px;
-}
-
-.sidebar-posts__post {
-    width: 100%;
-    display: flex;
-}
-.sidebar-posts__img {
-    width: 25%;
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
-        width: 25.7%;
+    & > &__post:nth-child(1n+2) {
+        margin-top: 21px;
     }
-    @media (max-width: $mobile-max) {
-        width: 21%;
-    }
-}
 
-.sidebar-posts-content {
-    margin-left: 21px;
-    width: calc(100% - 21px - 25%);
-    @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
-        width: 74.3%;
-    }
-    @media (max-width: $mobile-max) {
-        width: 78%; 
-    }
-}
+    &__title {
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
 
-.sidebar-posts-content__date {
-    font-size: 12px;
-    color: $color-font;
-    margin: 0 14px 6px 0;
-}
+        &::after {
+            display: block;
+            content: '';
+            height: 3px;
+            width: 66px;
+            background-color: $color-line;
+            margin: 15px auto 20px auto;
+        }
+    }
 
-.sidebar-posts-content__title {
-    text-transform: uppercase;
-    font-size: 14px;
+    &-post {
+        width: 100%;
+        display: flex;
+
+        &__img {
+            width: 25%;
+            @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+                width: 25.7%;
+            }
+            @media (max-width: $mobile-max) {
+                width: 21%;
+            }
+        }
+
+        &__content {
+            margin-left: 21px;
+            width: calc(100% - 21px - 25%);
+            @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+                width: 74.3%;
+            }
+            @media (max-width: $mobile-max) {
+                width: 78%; 
+            }
+        }
+
+        &__date {
+            font-size: 12px;
+            color: $color-font;
+            margin: 0 14px 6px 0;
+        }
+
+        &__text {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
 }

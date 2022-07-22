@@ -11,10 +11,10 @@ header {
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         background-image: url('/img/banner-bg-tablet.jpg');
     }
-
     @media (max-width: $mobile-max) {
         background-image: url('/img/banner-mobile.jpg');
     }
+    
     &:after {
         width: 100%;
         height: 100%;

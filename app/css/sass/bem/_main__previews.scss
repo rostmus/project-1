@@ -1,4 +1,4 @@
-.main__previews-list>li:nth-child(1n+2) {
+.main__previews-list > .main__previews-item:nth-child(1n+2) {
     margin-top: 58px;
     @media (max-width: $mobile-max) {
         margin-top: 30px;
@@ -9,6 +9,17 @@
     display: flex;
     @media (max-width: $tablet-max) {
         flex-direction: column;
+    }
+    
+    &::after {
+        @media (max-width: $tablet-max) {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: $color-border-tag;
+            margin-top: 19px;
+        }
     }
 
     &__img {
@@ -87,13 +98,3 @@
 
 }
 
-.main__previews-item::after {
-    @media (max-width: $tablet-max) {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 100%;
-        background-color: $color-border-tag;
-        margin-top: 19px;
-    }
-}
