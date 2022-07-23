@@ -7,19 +7,13 @@
         width: 91%;
     }
 
-    &-items {
+    &__items {
         display: flex;
         justify-content: center;
 
-        &-item__svg {
-            width: 20px;
-            color: black;
-            cursor: pointer;
-        
-        }
     }
 
-    &-items > &-items-item:nth-child(1n+2) {
+    &__items > .network-item:nth-child(1n+2) {
         margin-left: 33px;
     }
 }
