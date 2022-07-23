@@ -1,0 +1,36 @@
+.sidebar-posts-post {
+    width: 100%;
+    display: flex;
+
+    &__img {
+        width: 25%;
+        @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+            width: 25.7%;
+        }
+        @media (max-width: $mobile-max) {
+            width: 21%;
+        }
+    }
+
+    &__content {
+        margin-left: 21px;
+        width: calc(100% - 21px - 25%);
+        @media (min-width: $tablet-min) and  (max-width: $tablet-max) {
+            width: 74.3%;
+        }
+        @media (max-width: $mobile-max) {
+            width: 78%; 
+        }
+    }
+
+    &__date {
+        font-size: 12px;
+        color: $color-font;
+        margin: 0 14px 6px 0;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
