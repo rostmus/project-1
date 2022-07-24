@@ -5,47 +5,4 @@
         width: 91%;
         margin: auto;
     }
-        &-items {
-            width: 34%;
-            font-size: 13px;
-            display: flex;
-            text-decoration: none;
-            @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-                width: 24px;
-            }
-            @media (max-width: $mobile-max) {
-                align-self: flex-end;
-                width: 24px;
-            }
-
-            &__item {
-                display: block;
-                margin-right: 28px;
-                transition: all 0.3s linear;
-                @media (max-width: $tablet-max) {
-                    display: none;
-                }
-            }
-            &__item:hover {
-                text-decoration: underline;
-            }
-        }
-
-        &__sandwich {
-            display: none;
-            @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-                display: block;
-                width: 25px;
-                fill: $font-white;
-                cursor: pointer;
-            }
-            @media (max-width: $mobile-max) {
-                display: block;
-                width: 25px;
-                fill: $font-white;
-                cursor: pointer;
-                align-self: flex-end;
-            }
-        
-        }
-    }
+}

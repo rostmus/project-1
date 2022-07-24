@@ -417,56 +417,6 @@ header:after {
     margin: auto;
   }
 }
-.navigator-items {
-  width: 34%;
-  font-size: 13px;
-  display: flex;
-  text-decoration: none;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .navigator-items {
-    width: 24px;
-  }
-}
-@media (max-width: 767px) {
-  .navigator-items {
-    align-self: flex-end;
-    width: 24px;
-  }
-}
-.navigator-items__item {
-  display: block;
-  margin-right: 28px;
-  transition: all 0.3s linear;
-}
-@media (max-width: 1279px) {
-  .navigator-items__item {
-    display: none;
-  }
-}
-.navigator-items__item:hover {
-  text-decoration: underline;
-}
-.navigator__sandwich {
-  display: none;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .navigator__sandwich {
-    display: block;
-    width: 25px;
-    fill: #ffffff;
-    cursor: pointer;
-  }
-}
-@media (max-width: 767px) {
-  .navigator__sandwich {
-    display: block;
-    width: 25px;
-    fill: #ffffff;
-    cursor: pointer;
-    align-self: flex-end;
-  }
-}
 
 .navigation {
   width: 71%;
