@@ -3,21 +3,28 @@ sass = require('gulp-sass')(require('sass')),
 browserSync = require('browser-sync'),
 concat = require('gulp-concat'),
 rename = require('gulp-rename'),
-del = require('del')
+del = require('del');
+
+const autoprefixer = require('gulp-autoprefixer');
 //очистка
 gulp.task('clean', function() {
     return del.sync('dist')
 })
 //css сборка
 gulp.task('sass', function() {
-    return gulp.src('app/css/sass/**/*.scss')
-    .pipe(sass())
+    return gulp.src('app/css/sass/**/*.scss', { sourcemap: true,})
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }
+    ))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({stream: true}))
 })
 //js сборка
 gulp.task('scripts', function() {
-    return gulp.src('app/js/*.js')
+    return gulp.src(['app/js/plugins/**/*.js','app/js/main.js'], { sourcemaps: true })
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({stream: true}))
@@ -61,7 +68,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('app/css/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html'), gulp.parallel('html')
-    gulp.watch('app/js/*.js'), gulp.parallel('scripts')
+    gulp.watch('app/js/**/*.js'), gulp.parallel('scripts')
     gulp.watch('app/img/**/*'), gulp.parallel('img')
     gulp.watch('app/fonts/**/*'), gulp.parallel('fonts')
     gulp.watch('app/svg/**/*'), gulp.parallel('svg')
