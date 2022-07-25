@@ -4,7 +4,7 @@
     width: calc((100% - 226px) / 3);
     align-items: center;
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        width: 45%;
+        width: calc((100% - 50px) / 2);
         margin-bottom: 20px;
     }
     @media (max-width: $mobile-max) {
@@ -16,7 +16,7 @@
         width: 100%;
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
             margin: 0 auto 0 auto;
-            width: 100%;
+            width: 70%;
         }
     }
 

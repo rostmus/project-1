@@ -33,18 +33,14 @@
     }
 
     &__items > .products-item:nth-child(1n+2) {
+        @media (min-width: $tablet-max) {
         margin-left: 113px;
-        @media (max-width: $tablet-max) {
-            margin-left: 0;
-        }
-        @media (max-width: $mobile-max) {
-            margin-left: auto;
         }
     }
 
     &__items > .products-item:nth-child(even) {
-        @media (max-width: $mobile-max) {
-            margin-left: auto;
+        @media (max-width: $tablet-max) {
+            margin-left: 50px;
         }
     }
 }
