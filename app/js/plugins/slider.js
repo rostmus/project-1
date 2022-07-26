@@ -1,28 +1,30 @@
 
 (function () {
     'use strict'
-    function activating(setting) {
-        let sliderButton = document.querySelector("." + setting.element).closest('.js-slider__beginning').querySelector('.js-slider__button')
-        function sliderStart() {
-            const sliderText = sliderButton.closest('.js-slider__beginning').querySelector('.js-slider__text')
-            const sliderContent = sliderButton.closest('.js-slider__beginning').querySelector('.js-slider__content')
-            if (sliderButton.classList.contains('active')) {
-                sliderButton.classList.remove('active')
-                sliderText.textContent = 'Развернуть'
-                sliderContent.style.maxHeight = 300 + 'px'
-                // sliderContent.style.height = 300 + 'px'
-                sliderButton.style.transform = 'rotate(0deg)'
-                return
-            }
-            sliderButton.classList.add('active')
-            sliderText.textContent = 'Свернуть'
-            // sliderContent.style.height = 'auto'
-            sliderContent.style.maxHeight = 10000 + 'px'
-            sliderButton.style.transform = 'rotate(180deg)'
+    function spoilerPlugin(setting) {
+        const sliderHeight = setting.sliderHeight
+        const sliderElements = setting.elements
+        for (let i = 0; i < sliderElements.length; i++) {
+            const sliderElement = sliderElements[i]
+            const sliderButton = sliderElement.querySelector('.js-slider__button')
+            const sliderText = sliderElement.querySelector('.js-slider__text')
+            const sliderContent = sliderElement.querySelector('.js-slider__content')
+            const sliderSvg = sliderElement.querySelector('.js-slider__svg')
+            const MAX_HEIGHT_SLIDER = '100%'
+            const MIN_HEIGHT_SLIDER = '300px'
+            sliderButton.addEventListener('click', () => {
+                if (sliderSvg.classList.contains('spoiler__svg-active')) {
+                    sliderSvg.classList.remove('spoiler__svg-active')
+                    sliderText.textContent = 'Развернуть'
+                    sliderContent.style.maxHeight = MIN_HEIGHT_SLIDER
+                    return
+                }
+                sliderSvg.classList.add('spoiler__svg-active')
+                sliderText.textContent = 'Свернуть'
+                sliderContent.style.maxHeight = MAX_HEIGHT_SLIDER
+            })
         }
-        sliderStart()
-        // sliderButton.addEventListener('click', sliderStart)
     }
-    window.activate = activating
+    window.spoilerPlugin = spoilerPlugin
 
 })();
