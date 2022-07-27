@@ -3,7 +3,10 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         console.log('main js');
-        const sliderList = document.querySelectorAll('.js-slider')
-            spoilerPlugin({elements: sliderList, height: 300})
+        const sliderList = document.querySelectorAll('.js-spoiler')
+        sliderList.forEach((el)=> {
+            const spoilerPlug = new SpoilerPlugin({ element: el, height: 300 })
+            spoilerPlug.spoilerWork()
+        })
     })
 })();
