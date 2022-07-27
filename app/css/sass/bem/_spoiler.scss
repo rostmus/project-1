@@ -65,10 +65,8 @@
 
     &__content {
         max-height: 300px;
-        padding: 5px;
-        border: 1px solid $color-tag-cup;
         overflow: hidden;
-        transition: max-height 0.7s;
     }
+    
 
 }

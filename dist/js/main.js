@@ -1,79 +1,47 @@
-
 (function () {
     'use strict'
     class SpoilerPlugin {
         constructor(setting) {
-            this.spoilerHeight = setting.height
-            this.spoilerElement = setting.element
-            this.spoilerButton = this.spoilerElement.querySelector('.js-spoiler__button')
-            this.spoilerText = this.spoilerElement.querySelector('.js-spoiler__text')
-            this.spoilerContent = this.spoilerElement.querySelector('.js-spoiler__content')
-            this.spoilerSvg = this.spoilerElement.querySelector('.js-spoiler__svg')
+            this.height = setting.height
+            this.element = setting.element
+            this.button = this.element.querySelector('.js-spoiler__button')
+            this.text = this.element.querySelector('.js-spoiler__text')
+            this.content = this.element.querySelector('.js-spoiler__content')
+            this.svg = this.element.querySelector('.js-spoiler__svg')
             this.MAX_HEIGHT_SLIDER = '100%'
             this.MIN_HEIGHT_SLIDER = '300px'
+            this.contentDiv = this.content.querySelector('div')
+            this.contentDivHeight = this.contentDiv.offsetHeight
         }
 
-        spoilerActive() {
-            this.spoilerSvg.classList.add('spoiler__svg-active')
-            this.spoilerElement.classList.add('active')
-            this.spoilerText.textContent = 'Свернуть'
-            this.spoilerContent.style.maxHeight = this.MAX_HEIGHT_SLIDER
+        open() {
+            this.svg.classList.add('spoiler__svg-active')
+            this.element.classList.add('active')
+            this.text.textContent = 'Свернуть'
+            this.content.style.maxHeight = this.MAX_HEIGHT_SLIDER
         }
 
-        spoilerDeactive() {
-            this.spoilerElement.classList.remove('active')
-            this.spoilerSvg.classList.remove('spoiler__svg-active')
-            this.spoilerText.textContent = 'Развернуть'
-            this.spoilerContent.style.maxHeight = this.MIN_HEIGHT_SLIDER
+        close() {
+            this.element.classList.remove('active')
+            this.svg.classList.remove('spoiler__svg-active')
+            this.text.textContent = 'Развернуть'
+            this.content.style.maxHeight = this.MIN_HEIGHT_SLIDER
         }
 
         spoilerWork() {
-            this.spoilerButton.addEventListener('click', ()=> {
-                if (this.spoilerSvg.classList.contains('spoiler__svg-active')) {
-                    this.spoilerDeactive()
+            this.button.addEventListener('click', ()=> {
+                if (this.svg.classList.contains('spoiler__svg-active')) {
+                    this.close()
                 } else {
-                    this.spoilerActive()
+                    this.open()
                 }
+                console.log(this.contentDiv, this.contentDivHeight)
             })
         }
     }
     window.SpoilerPlugin = SpoilerPlugin
 })();
 
-
-
-
-// (function () {
-//     'use strict'
-//     function spoilerPlugin(setting) {
-//         const sliderHeight = setting.sliderHeight
-//         const sliderElements = setting.elements
-//         for (let i = 0; i < sliderElements.length; i++) {
-//             const sliderElement = sliderElements[i]
-//             const sliderButton = sliderElement.querySelector('.js-spoiler__button')
-//             const sliderText = sliderElement.querySelector('.js-spoiler__text')
-//             const sliderContent = sliderElement.querySelector('.js-spoiler__content')
-//             const sliderSvg = sliderElement.querySelector('.js-spoiler__svg')
-//             const MAX_HEIGHT_SLIDER = '100%'
-//             const MIN_HEIGHT_SLIDER = '300px'
-//             sliderButton.addEventListener('click', () => {
-//                 if (sliderSvg.classList.contains('spoiler__svg-active')) {
-                    //    sliderElement.classList.remove('active')
-//                     sliderSvg.classList.remove('spoiler__svg-active')
-//                     sliderText.textContent = 'Развернуть'
-//                     sliderContent.style.maxHeight = MIN_HEIGHT_SLIDER
-//                     return
-//                 }
-//                 sliderSvg.classList.add('spoiler__svg-active')
-            //    sliderElement.classList.add('active')
-
-//                 sliderText.textContent = 'Свернуть'
-//                 sliderContent.style.maxHeight = MAX_HEIGHT_SLIDER
-//             })
-//         }
-//     }
-//     window.spoilerPlugin = spoilerPlugin
-// })();
 (function () {
     'use strict'
     console.log('tabs');
