@@ -1,16 +1,19 @@
 .spoiler {
     max-width: 1170px;
     margin: 0 auto;
-
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: 91%;
     }
-
     @media (max-width: $mobile-max) {
         width: 92%;
         margin-top: 42px;
         flex-direction: column;
     }
+    &__active  {
+        .spoiler__svg{ 
+        transform: rotate(180deg);
+    }
+}
 
     &__title {
         display: block;
@@ -53,13 +56,10 @@
     }
 
     &__svg {
-        width: 50px;
+        width: 23px;
         margin-left: 20px;
-        transition: transform 0.3s linear;
+        transition: transform 0.4s linear;
         transform: rotate(0deg);
-        &-active {
-            transform: rotate(180deg);
-        }
     }
 
 
