@@ -1,45 +1,47 @@
 (function () {
     'use strict'
+    //плагин спойлера
     class SpoilerPlugin {
         constructor(setting) {
-            this.height = setting.height
-            this.element = setting.element
-            this.button = this.element.querySelector('.js-spoiler__button')
-            this.text = this.element.querySelector('.js-spoiler__text')
-            this.content = this.element.querySelector('.js-spoiler__content')
-            this.svg = this.element.querySelector('.js-spoiler__svg')
-            this.MAX_HEIGHT_SLIDER = '100%'
-            this.MIN_HEIGHT_SLIDER = '300px'
-            this.contentDiv = this.content.querySelector('div')
-            this.contentDivHeight = this.contentDiv.offsetHeight
+            this.height = setting.height;
+            this.element = setting.element;
+            this.button = this.element.querySelector('.js-spoiler__button');
+            this.text = this.element.querySelector('.js-spoiler__text');
+            this.content = this.element.querySelector('.js-spoiler__content');
+            this.svg = this.element.querySelector('.js-spoiler__svg');
+            this.MAX_HEIGHT_SLIDER = '100%';
+            this.MIN_HEIGHT_SLIDER = '300px';
+            this.holder = this.element.querySelector('.js-spoiler__holder');
+            this.contentHeight;
+            this.isActive = false;
         }
-
+//открытие спойлера
         open() {
-            this.svg.classList.add('spoiler__svg-active')
-            this.element.classList.add('active')
-            this.text.textContent = 'Свернуть'
-            this.content.style.maxHeight = this.MAX_HEIGHT_SLIDER
+            this.element.classList.add('spoiler__active');
+            this.text.textContent = 'Свернуть';
+            this.isActive = true;
+            this.contentHeight = `${this.content.offsetHeight}px`;
+            this.holder.style.maxHeight = this.contentHeight;
         }
-
+//закрытие спойлера
         close() {
-            this.element.classList.remove('active')
-            this.svg.classList.remove('spoiler__svg-active')
-            this.text.textContent = 'Развернуть'
-            this.content.style.maxHeight = this.MIN_HEIGHT_SLIDER
+            this.element.classList.remove('spoiler__active');
+            this.text.textContent = 'Развернуть';
+            this.holder.style.maxHeight = this.MIN_HEIGHT_SLIDER;
+            this.isActive = false;
         }
-
-        spoilerWork() {
+//инициализация работы спойлера
+        initSpoiler() {
             this.button.addEventListener('click', ()=> {
-                if (this.svg.classList.contains('spoiler__svg-active')) {
-                    this.close()
+                if (this.isActive) {
+                    this.close();
                 } else {
-                    this.open()
+                    this.open();
                 }
-                console.log(this.contentDiv, this.contentDivHeight)
             })
         }
     }
-    window.SpoilerPlugin = SpoilerPlugin
+    window.SpoilerPlugin = SpoilerPlugin;
 })();
 
 (function () {
@@ -92,10 +94,10 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         console.log('main js');
-        const sliderList = document.querySelectorAll('.js-spoiler')
+        const sliderList = document.querySelectorAll('.js-spoiler');
         sliderList.forEach((el)=> {
-            const spoilerPlug = new SpoilerPlugin({ element: el, height: 300 })
-            spoilerPlug.spoilerWork()
+            const spoilerPlug = new SpoilerPlugin({ element: el, height: 300 });
+            spoilerPlug.initSpoiler();
         })
 
 
