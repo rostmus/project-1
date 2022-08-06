@@ -8,5 +8,13 @@
             const spoilerPlug = new SpoilerPlugin({ element: el, height: 300 })
             spoilerPlug.spoilerWork()
         })
+
+
+        const tabsThemes = document.querySelectorAll('.js-tabs__theme')
+        tabsThemes.forEach((el)=> {
+            const tabsPlug = new tabs(el)
+            tabsPlug.tabWork()
+
+        })
     })
 })();

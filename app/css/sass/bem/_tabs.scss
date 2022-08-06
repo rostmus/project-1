@@ -1,0 +1,35 @@
+.tabs {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 62px;
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 91%;
+    }
+    @media (max-width: $mobile-max) {
+        width: 92%;
+        margin-top: 42px;
+        flex-direction: column;
+    }
+
+    &__themes {
+        display: flex;
+
+        & > .tabs__theme {
+            flex-grow: 1;
+        }
+
+        & > .tabs__theme:nth-child(1n +2) {
+            margin-left: 25px;
+        }
+    }
+
+    &__theme {
+        &--active {
+            box-shadow: 0 1px 0 #fff, 0 0 0 1px $color-border;
+        }
+        padding: 10px;
+        cursor: pointer;
+        background-color: white;
+
+    }
+}

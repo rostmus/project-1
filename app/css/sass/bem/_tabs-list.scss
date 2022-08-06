@@ -1,0 +1,10 @@
+.tabs-list {
+    &__content {
+        display: none;
+        padding: 10px;
+        border: 1px solid $color-border;
+        &--active {
+            display: block;
+        }
+    }
+}

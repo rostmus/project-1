@@ -32,6 +32,7 @@
         width: 100%;
         border: 3px solid $color-border;
         padding: 55px 20px;
+        height: 200px;
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
             padding: 31px 20px;
         }
