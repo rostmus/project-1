@@ -10,10 +10,10 @@
         })
 
 
-        const tabsThemes = document.querySelectorAll('.js-tabs__theme')
+        const tabsThemes = document.querySelectorAll('.js-tabs')
         tabsThemes.forEach((el)=> {
             const tabsPlug = new tabs(el)
-            tabsPlug.tabWork()
+            tabsPlug.initTab()
 
         })
     })
