@@ -68,7 +68,35 @@
 
     <!-- Основная часть -->
     <main class="content">
-
+        <div class="swiper-container js-swiper-container swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper__item swiper-slide js-swiper-item">
+                    <div class="swiper__title">Единица свайпера</div>
+                    <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
+               </div>
+               <div class="swiper__item swiper-slide js-swiper-item">
+                    <div class="swiper__title">Единица свайпера</div>
+                    <div class="swiper__content">
+                       <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
+                    </div>
+                </div>
+                <div class="swiper__item swiper-slide js-swiper-item">
+                     <div class="swiper__title">Единица свайпера</div>
+                     <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
+                 </div>
+            <div class="swiper__item swiper-slide js-swiper-item">
+                <div class="swiper__title">Единица свайпера</div>
+                <div class="swiper__content">
+                    <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
+                </div>
+            </div>
+        </div>
+            <div class="swiper-button">
+                <button class="swiper-button__item swiper-button-prev js-swiper-button-prev"></button>
+                <button class="swiper-button__item swiper-button-next js-swiper-button-next"></button>
+            </div>
+            <div class="swiper-pagination js-swiper-pagination"></div>
+        </div>
         <!-- Шапка основной части -->
         <article class="cap">
             <h2 class="cap__title">Сейчас в тренде</h2>
@@ -607,7 +635,9 @@
         <!-- копирайт -->
         <div class="copyright">Copyright C 2009-2019 City Blog LLC.</div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/plugins/modules.js"></script>
+    <script type="module" src="./js/external/external.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

@@ -24,9 +24,23 @@ gulp.task('sass', function() {
 })
 //js сборка
 gulp.task('scripts', function() {
-    return gulp.src(['app/js/plugins/**/*.js','app/js/main.js'], { sourcemaps: true })
-    .pipe(concat('main.js'))
+    return gulp.src('app/js/main.js', { sourcemaps: true })
     .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.reload({stream: true}))
+})
+
+//js сборка модули
+gulp.task('scriptsModules', function() {
+    return gulp.src(['app/js/plugins/**/*.js'], { sourcemaps: true })
+    .pipe(concat('modules.js'))
+    .pipe(gulp.dest('dist/js/plugins'))
+    .pipe(browserSync.reload({stream: true}))
+})
+
+gulp.task('external', function() {
+    return gulp.src(['app/js/external/**/*.js'], { sourcemaps: true })
+    .pipe(concat('external.js'))
+    .pipe(gulp.dest('dist/js/external'))
     .pipe(browserSync.reload({stream: true}))
 })
 //html сборка
@@ -68,11 +82,13 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('app/css/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html'), gulp.parallel('html')
-    gulp.watch(['app/js/plugins/**/*.js','app/js/main.js']), gulp.parallel('scripts')
+    gulp.watch(['app/js/main.js']), gulp.parallel('scripts')
     gulp.watch('app/img/**/*'), gulp.parallel('img')
     gulp.watch('app/fonts/**/*'), gulp.parallel('fonts')
     gulp.watch('app/svg/**/*'), gulp.parallel('svg')
+    gulp.watch(['app/js/plugins/**/*.js']), gulp.parallel('scriptsModules')
+    gulp.watch(['app/js/external/**/*.js']), gulp.parallel('external')
     // gulp.task('default', gulp.parallel('sass','html', 'scripts', 'browser-sync','img', 'watch'))
 })
 
-gulp.task('build', gulp.parallel('clean','svg', 'fonts', 'sass', 'scripts', 'html', 'img', 'browser-sync','watch'))
+gulp.task('build', gulp.parallel('clean', 'external', 'scriptsModules', 'svg', 'fonts', 'sass', 'scripts', 'html', 'img', 'browser-sync','watch'))

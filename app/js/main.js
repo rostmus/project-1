@@ -1,6 +1,5 @@
+import {Tabs, SpoilerPlugin} from './plugins/modules.js'
 (function () {
-    'use strict';
-
     document.addEventListener('DOMContentLoaded', () => {
         console.log('main js');
         const sliderList = document.querySelectorAll('.js-spoiler');
@@ -12,7 +11,7 @@
 
         const tabsThemes = document.querySelectorAll('.js-tabs')
         tabsThemes.forEach((el)=> {
-            const tabsPlug = new tabs(el)
+            const tabsPlug = new Tabs(el)
             tabsPlug.initTab()
 
         })
