@@ -68,34 +68,36 @@
 
     <!-- Основная часть -->
     <main class="content">
-        <div class="swiper-container js-swiper-container swiper">
+        <!-- свайпер -->
+        <div class="js-swiper-container swiper swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper__item swiper-slide js-swiper-item">
-                    <div class="swiper__title">Единица свайпера</div>
-                    <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
+                     <div class="swiper__title">Единица свайпера</div>
+                     <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
                </div>
                <div class="swiper__item swiper-slide js-swiper-item">
-                    <div class="swiper__title">Единица свайпера</div>
-                    <div class="swiper__content">
-                       <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
+                     <div class="swiper__title">Единица свайпера</div>
+                     <div class="swiper__content">
+                        <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
                     </div>
                 </div>
                 <div class="swiper__item swiper-slide js-swiper-item">
                      <div class="swiper__title">Единица свайпера</div>
                      <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
                  </div>
-            <div class="swiper__item swiper-slide js-swiper-item">
-                <div class="swiper__title">Единица свайпера</div>
-                <div class="swiper__content">
-                    <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
-                </div>
+                 <div class="swiper__item swiper-slide js-swiper-item">
+                    <div class="swiper__title">Единица свайпера</div>
+                    <div class="swiper__content">
+                       <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
+                   </div>
+               </div>
             </div>
-        </div>
             <div class="swiper-button">
                 <button class="swiper-button__item swiper-button-prev js-swiper-button-prev"></button>
                 <button class="swiper-button__item swiper-button-next js-swiper-button-next"></button>
             </div>
             <div class="swiper-pagination js-swiper-pagination"></div>
+        </div>
         </div>
         <!-- Шапка основной части -->
         <article class="cap">
@@ -483,6 +485,9 @@
                 </div>
             </section>
         </div>
+        <div class="test">
+
+        </div>
                 <!-- товары -->
         <article class="products">
             <h2 class="products__title">Наши товары</h2>
@@ -556,6 +561,46 @@
                 </li>
             </ul>
         </article>
+        
+        <div class="text-slider">
+            <h2 class="text-slider__title">Вопросы и ответы</h2>
+            <div class="text-slider__container">
+                <div class="text-slider__item js-text-slider">
+                    <div class="text-slider__quetion-conteiner">
+                        <div class="text-slider__quetion">Как понять что ты спишь?</div>
+                        <div class="text-slider__button text-slider__button--first active js-text-button">
+                            <svg>
+                                <use href="./svg/triangledown_83849.svg#triangle"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-slider__answer text-slider__answer--first js-text-answer">Вы видете какую-то фигню</div>
+                </div>
+
+                <div class="text-slider__item js-text-slider">
+                    <div class="text-slider__quetion-conteiner">
+                        <div class="text-slider__quetion">Где купить варежки</div>
+                        <div class="text-slider__button js-text-button">
+                            <svg>
+                                <use href="./svg/triangledown_83849.svg#triangle"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-slider__answer js-text-answer">В магазине</div>
+                </div>
+            </div>
+            <div class="text-slider__item js-text-slider">
+                <div class="text-slider__quetion-conteiner">
+                    <div class="text-slider__quetion">Почему прогноз погоды такой не точный?</div>
+                    <div class="text-slider__button js-text-button">
+                        <svg>
+                            <use href="./svg/triangledown_83849.svg#triangle"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-slider__answer js-text-answer">Все погодные прогнозы делятся на сверхкраткосрочные, краткосрочные, среднесрочные, долгосрочные и сверхдолгосрочные. Чем более краткосрочнее прогноз, тем он точнее. Так, точность сверхкраткосрочного прогноза (до 12 часов) составляет около 95%, а сверхдолгосрочного (более чем на 3 месяца) – уже 50%, что делает его, в принципе, абсолютно бессмысленным.</div>
+            </div>
+        </div>
 
         <article class="spoiler js-spoiler">
             <h2 class="spoiler__title">Наши лучшие фото</h2>
@@ -635,9 +680,15 @@
         <!-- копирайт -->
         <div class="copyright">Copyright C 2009-2019 City Blog LLC.</div>
     </footer>
-    <script type="module" src="./js/plugins/modules.js"></script>
+    <script src="./js/bibliotek/jquery-3.6.1.min.js"></script>
+    <script src="./js/plugins/modules.js"></script>
     <script type="module" src="./js/external/external.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-export class Tabs {
+class Tabs {
     //табы
     constructor(element) {
         this.element = element

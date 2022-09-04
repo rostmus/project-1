@@ -1,4 +1,23 @@
-export class SpoilerPlugin {
+// import {Tabs, SpoilerPlugin} from './modules.js'
+(function () {
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('main js');
+        const sliderList = document.querySelectorAll('.js-spoiler');
+        sliderList.forEach((el)=> {
+            const spoilerPlug = new SpoilerPlugin({ element: el, height: 300 });
+            spoilerPlug.initSpoiler();
+        })
+
+
+        const tabsThemes = document.querySelectorAll('.js-tabs');
+        tabsThemes.forEach((el)=> {
+            const tabsPlug = new Tabs(el);
+            tabsPlug.initTab();
+        })
+    })
+})();
+
+class SpoilerPlugin {
     //плагин спойлера
     constructor(setting) {
         this.height = setting.height;
@@ -41,7 +60,33 @@ export class SpoilerPlugin {
 }
 
 
-export class Tabs {
+(function ($) {
+    $.fn.sliderj = function () {
+        const $self = $(this)
+        const $button = $self.find('.js-text-button')
+        const $content = $self.find('.js-text-answer')
+
+        const init = function () {
+            $button.click(function () {
+                if ($button.hasClass('active')) {
+                    $button.css({ transform: 'rotate(' + 0 + 'deg)' })
+                    $button.removeClass('active')
+                } else {
+                    $button.addClass('active')
+                    $button.css({ transform: 'rotate(' + 180 + 'deg)' })
+                }
+                $content.slideToggle()
+            })
+        }
+        init()
+    }
+
+    $('.js-text-slider').each(function () {
+        console.log($(this))
+        $(this).data('sliderj', $(this).sliderj());
+    });
+})(jQuery);
+class Tabs {
     //табы
     constructor(element) {
         this.element = element

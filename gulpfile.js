@@ -24,21 +24,22 @@ gulp.task('sass', function() {
 })
 //js сборка
 gulp.task('scripts', function() {
-    return gulp.src('app/js/main.js', { sourcemaps: true })
-    .pipe(gulp.dest('dist/js'))
+    return gulp.src('app/js/bibliotek/**/*.js')
+    // .pipe(concat('bibliotek.js'))
+    .pipe(gulp.dest('dist/js/bibliotek'))
     .pipe(browserSync.reload({stream: true}))
 })
 
 //js сборка модули
 gulp.task('scriptsModules', function() {
-    return gulp.src(['app/js/plugins/**/*.js'], { sourcemaps: true })
+    return gulp.src('app/js/plugins/**/*.js')
     .pipe(concat('modules.js'))
     .pipe(gulp.dest('dist/js/plugins'))
     .pipe(browserSync.reload({stream: true}))
 })
 
 gulp.task('external', function() {
-    return gulp.src(['app/js/external/**/*.js'], { sourcemaps: true })
+    return gulp.src('app/js/external/**/*.js')
     .pipe(concat('external.js'))
     .pipe(gulp.dest('dist/js/external'))
     .pipe(browserSync.reload({stream: true}))

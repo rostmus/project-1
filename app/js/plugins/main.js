@@ -1,4 +1,4 @@
-import {Tabs, SpoilerPlugin} from './plugins/modules.js'
+// import {Tabs, SpoilerPlugin} from './modules.js'
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
         console.log('main js');
@@ -9,11 +9,10 @@ import {Tabs, SpoilerPlugin} from './plugins/modules.js'
         })
 
 
-        const tabsThemes = document.querySelectorAll('.js-tabs')
+        const tabsThemes = document.querySelectorAll('.js-tabs');
         tabsThemes.forEach((el)=> {
-            const tabsPlug = new Tabs(el)
-            tabsPlug.initTab()
-
+            const tabsPlug = new Tabs(el);
+            tabsPlug.initTab();
         })
     })
 })();

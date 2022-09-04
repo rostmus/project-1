@@ -1,4 +1,4 @@
-export class SpoilerPlugin {
+class SpoilerPlugin {
     //плагин спойлера
     constructor(setting) {
         this.height = setting.height;
