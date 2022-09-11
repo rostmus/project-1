@@ -12,9 +12,9 @@
     spaceBetween: 100,
     pagination: {
         el: '.js-swiper-pagination',
-        // clickable: true,
-        // dynamicBullets: true,
-        type: 'progressbar',
+        clickable: true,
+        dynamicBullets: true,
+        // type: 'progressbar',
     },
     slidesPerView: 1,
     spaceBetween: 20,

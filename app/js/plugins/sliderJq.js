@@ -20,7 +20,6 @@
     }
 
     $('.js-text-slider').each(function () {
-        console.log($(this))
         $(this).data('sliderj', $(this).sliderj());
     });
 })(jQuery);

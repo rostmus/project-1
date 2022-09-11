@@ -11,11 +11,32 @@
         width: 100%;
         flex-direction: column;
     }
+    &-buttons {
+        transition: all 0.3s;
+        position: relative;
+        z-index: 10;
+        padding: 0;
+        background: none;
+        border: none;
+        display: none;
+
+        @media (max-width: $tablet-max) {
+            display: flex;
+        }
+
+        @media (max-width: $mobile-max) {
+            align-self: flex-end;
+        }
+
+        &--active {
+            transform: translate(180deg);
+        }
+    }
 
     &__logo {
         width: 16%;
 
-        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        @media(max-width: $tablet-max) {
             width: 22%;
         }
 
@@ -50,22 +71,9 @@
     }
 
     &__sandwich {
-        display: none;
-
-        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-            display: block;
-            width: 25px;
-            fill: $font-white;
-            cursor: pointer;
-        }
-
-        @media (max-width: $mobile-max) {
-            display: block;
-            width: 25px;
-            fill: $font-white;
-            cursor: pointer;
-            align-self: flex-end;
-        }
-
+        width: 100%;
+        fill: $font-white;
+        height: 25px;
+        width: 25px;
     }
 }

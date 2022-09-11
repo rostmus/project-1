@@ -21,6 +21,12 @@
         & > .tabs__theme:nth-child(1n +2) {
             margin-left: 25px;
         }
+        & > .tabs__theme:nth-child(1) {
+            transform: translateX(1px);
+        }
+        & > .tabs__theme:last-child {
+            transform: translateX(-1px);
+        }
     }
 
     &__theme {

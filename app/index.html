@@ -14,7 +14,7 @@
     <!-- шапка -->
     <header>
         <div class="navigator">
-            <div class="navigation">
+            <div class="navigation js-navigator-wrapper">
                 <!-- Логотип -->
                 <div class="navigation__logo">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3070 696">
@@ -25,41 +25,45 @@
                     </svg>
                 </div>
                 <!-- Навигация -->
-                <ul class="navigation-items">
-                    <li class="navigation-items__item">
-                        <a href="">Главная</a>
-                    </li>
-                    <li class="navigation-items__item">
-                        <a href="">Посты</a>
-                    </li>
-                    <li class="navigation-items__item">
-                        <a href="">Статьи</a>
-                    </li>
-                    <li class="navigation-items__item">
-                        <a href="">Теги</a>
-                    </li>
-                    <li class="navigation-items__item">
-                        <a href="">Темы</a>
-                    </li>
-                    <li class="navigation-items__item">
-                        <a href="">Контакты</a>
-                    </li>
-                </ul>
-                <svg version="1.1" id="Capa_1"  class ='navigation__sandwich' xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612"
-                    xml:space="preserve">
-                    <g>
-                        <g id="_x33__1_">
-                            <g>
-                                <path
-                                    d="M61.2,122.4h489.6c33.782,0,61.2-27.387,61.2-61.2S584.613,0,550.8,0H61.2C27.387,0,0,27.387,0,61.2
-                                        S27.387,122.4,61.2,122.4z M550.8,244.8H61.2C27.387,244.8,0,272.187,0,306c0,33.812,27.387,61.2,61.2,61.2h489.6
-                                        c33.782,0,61.2-27.388,61.2-61.2C612,272.187,584.613,244.8,550.8,244.8z M550.8,489.6H61.2C27.387,489.6,0,516.987,0,550.8
-                                        C0,584.613,27.387,612,61.2,612h489.6c33.782,0,61.2-27.387,61.2-61.2C612,516.987,584.613,489.6,550.8,489.6z" />
+                <div class="navigation-items__wrapper js-navigation-wrapper">
+                    <ul class="navigation-items js-navigation-content">
+                        <li class="navigation-items__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="navigation-items__item">
+                            <a href="#post">Посты</a>
+                        </li>
+                        <li class="navigation-items__item">
+                            <a href="">Статьи</a>
+                        </li>
+                        <li class="navigation-items__item">
+                            <a href="">Теги</a>
+                        </li>
+                        <li class="navigation-items__item">
+                            <a href="">Темы</a>
+                        </li>
+                        <li class="navigation-items__item">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navigation-buttons js-navigation-buttons">
+                    <svg version="1.1" id="Capa_1"  class ='navigation__sandwich' xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612"
+                        xml:space="preserve">
+                        <g>
+                            <g id="_x33__1_">
+                                <g>
+                                    <path
+                                        d="M61.2,122.4h489.6c33.782,0,61.2-27.387,61.2-61.2S584.613,0,550.8,0H61.2C27.387,0,0,27.387,0,61.2
+                                            S27.387,122.4,61.2,122.4z M550.8,244.8H61.2C27.387,244.8,0,272.187,0,306c0,33.812,27.387,61.2,61.2,61.2h489.6
+                                            c33.782,0,61.2-27.388,61.2-61.2C612,272.187,584.613,244.8,550.8,244.8z M550.8,489.6H61.2C27.387,489.6,0,516.987,0,550.8
+                                            C0,584.613,27.387,612,61.2,612h489.6c33.782,0,61.2-27.387,61.2-61.2C612,516.987,584.613,489.6,550.8,489.6z" />
+                                </g>
                             </g>
                         </g>
-                    </g>
-                </svg>
+                    </svg>
+                </button>
             </div>
             <!-- </nav> -->
             <h1 class="navigation__title">Блог о творчестве, спорте, и образе жизни</h1>
@@ -102,7 +106,6 @@
         <!-- Шапка основной части -->
         <article class="cap">
             <h2 class="cap__title">Сейчас в тренде</h2>
-            <!-- Айтемы шапки основной части -->
             <ul class="cap__items">
                 <li class="cap-item">
                     <div class="cap-item__content">
@@ -198,7 +201,7 @@
         </div>
 
         <!-- основная колонка -->
-        <div class="box">
+        <div id="post" class="box">
 
             <section class="main__previews">
                 <!-- Айтемы основного контейнера -->
@@ -561,7 +564,7 @@
                 </li>
             </ul>
         </article>
-        
+        <!-- слайдер -->
         <div class="text-slider">
             <h2 class="text-slider__title">Вопросы и ответы</h2>
             <div class="text-slider__container">
@@ -601,7 +604,7 @@
                 <div class="text-slider__answer js-text-answer">Все погодные прогнозы делятся на сверхкраткосрочные, краткосрочные, среднесрочные, долгосрочные и сверхдолгосрочные. Чем более краткосрочнее прогноз, тем он точнее. Так, точность сверхкраткосрочного прогноза (до 12 часов) составляет около 95%, а сверхдолгосрочного (более чем на 3 месяца) – уже 50%, что делает его, в принципе, абсолютно бессмысленным.</div>
             </div>
         </div>
-
+        <!-- спойлер -->
         <article class="spoiler js-spoiler">
             <h2 class="spoiler__title">Наши лучшие фото</h2>
             <button class="spoiler__button js-spoiler__button">
@@ -620,6 +623,11 @@
                  </div>
             </div>
         </article>
+        <div class="video__wrapper">
+            <video class="video" autoplay muted loop src="/img/video1.mp4"></video>
+            <div class="video__title">Ждем вас снова</div>
+            <div class="vidoe__background"></div>
+        </div>
     </main>
 
     <!-- Футер -->
