@@ -14,5 +14,11 @@
             const tabsPlug = new Tabs(el);
             tabsPlug.initTab();
         })
+
+        const calculatePlagin = document.querySelectorAll('.js-calculate');
+        calculatePlagin.forEach((el)=> {
+            const calculate = new Calculate(el)
+            calculate.init()
+        })
     })
 })();

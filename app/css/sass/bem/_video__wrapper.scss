@@ -6,8 +6,8 @@
         &:hover {
             .video__title { 
                 color: $color-tag-cup;
-                letter-spacing: 25px;
-                font-size: 55px;
+                letter-spacing: 30px;
+                // font-size: 55px;
                 top: 10%;
                 @media(max-width: $tablet-max) {
                     font-size: 35px;
@@ -23,6 +23,7 @@
         width: 100%;
     }
     .video__title {
+        width: 100%;
         text-align: center;
         z-index: 3;
         font-size: 42px;
@@ -33,7 +34,7 @@
         transform: translateX(-50%);
         letter-spacing: 10px;
         text-transform: uppercase;
-        transition: all 5s;
+        transition: all 4s;
         @media(max-width: $tablet-max) {
             font-size: 25px;
         }

@@ -43,7 +43,7 @@
                             <a href="">Темы</a>
                         </li>
                         <li class="navigation-items__item">
-                            <a href="calculate.html">Калькулятор</a>
+                            <a href="">Калькулятор</a>
                         </li>
                     </ul>
                 </div>
@@ -72,36 +72,7 @@
 
     <!-- Основная часть -->
     <main class="content">
-        <!-- свайпер -->
-        <div class="js-swiper-container swiper swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper__item swiper-slide js-swiper-item">
-                     <div class="swiper__title">Единица свайпера</div>
-                     <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
-               </div>
-               <div class="swiper__item swiper-slide js-swiper-item">
-                     <div class="swiper__title">Единица свайпера</div>
-                     <div class="swiper__content">
-                        <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
-                    </div>
-                </div>
-                <div class="swiper__item swiper-slide js-swiper-item">
-                     <div class="swiper__title">Единица свайпера</div>
-                     <div class="swiper__content">Тут будет какой очень большой и длинный текст, или быть может даже и фото - кстати может быть даже видео - главно ждите и смотрите что появляется</div>
-                 </div>
-                 <div class="swiper__item swiper-slide js-swiper-item">
-                    <div class="swiper__title">Единица свайпера</div>
-                    <div class="swiper__content">
-                       <img src="https://cameralabs.org/media/lab19/07/11-3/fotograf-klod-nori-41.jpg">
-                   </div>
-               </div>
-            </div>
-            <div class="swiper-button">
-                <button class="swiper-button__item swiper-button-prev js-swiper-button-prev"></button>
-                <button class="swiper-button__item swiper-button-next js-swiper-button-next"></button>
-            </div>
-            <div class="swiper-pagination js-swiper-pagination"></div>
-        </div>
+
         <!-- Шапка основной части -->
         <article class="cap">
             <h2 class="cap__title">Сейчас в тренде</h2>
@@ -166,166 +137,39 @@
             </ul>
         </article>
 
-        <!-- табы -->
-        <div class="tabs js-tabs">
-            <ul class="tabs__themes js-tabs__themes">
-                <li class="tabs__theme tabs__theme--active js-tabs__theme"> Описание</li>
-                <li class="tabs__theme js-tabs__theme"> Список тем</li>
-                <li class="tabs__theme js-tabs__theme"> Контакты</li>
-                <li class="tabs__theme js-tabs__theme"> Способы оплаты</li>
-            </ul>
 
-            <div class="tabs-list">
-                <div class="tabs-list__content tabs-list__content--active js-tab">
-                    <p>Блогинг – это ведение блога, сам процесс размещения в нём информации – публикации мультимедиа, текста.</p>
-                    <p>Блог (происходит от английского blog, от web log – интернет-журнал событий, авторский онлайн-дневник) – это веб-ресурс (веб-сайт), основным содержанием которого являются постоянно публикующиеся посты (записи), содержащие текстовые материалы, мультимедийные файлы (аудио, видео, pdf и т.д.), изображения.</p>
-                </div>
-                <div class="tabs-list__content js-tab">
-                    <ul class="tabs-list__themes">
-                        <li>Сейчас в тренде</li>
-                        <li>Основные темы</li>
-                        <li>Наши товары</li>
-                        <li>Наши посты</li>
-                        <li>Наши лучшие фото</li>
-                    </ul>
-                </div>
-                <div class="tabs-list__content js-tab">
-                    Соц соцсети
-                    Телефон
-                </div>
-                <div class="tabs-list__content js-tab">
-                    Переводом на карту
-                </div>
-            </div>
-        </div>
 
         <!-- основная колонка -->
         <div id="post" class="box">
 
             <section class="main__previews">
-                <!-- Айтемы основного контейнера -->
-                <ul class="main__previews-list">
-                    <li class="previews-item">
-                        <div class="previews-item__img">
-                            <img src="img/last-post1.jpg" alt="Идущий по пляжу мужчина">
+                <div class="calculate">
+                    <div class="calculate__wrapper js-calculate">
+                        <div class="calculate__header">Калькулятор ТЕСленок</div>
+                        <div class="calculate__display js-calculate-display">
+                            <div class="calculate__display-left js-calculate-display-left"></div>
+                            <div class="calculate__display-right js-calculate-display-right">0</div>
                         </div>
-                        <div class="previews-item__content">
-                            <div class="previews-item__tags">
-                                <div class="previews-item__tag">
-                                    <a href="">Travel</a>
-                                </div>
-                                <div class="previews-item__tag">
-                                    <a href="">Health</a>
-                                </div>
-                            </div>
-                            <div class="previews-item__title">
-                                <a href="">10 мест, ради которых стоит проснуться на рассвете</a>
-                            </div>
-                            <div class="previews-item__info">
-                                <div class="previews-item__date">10 июня 2019</div>
-                                <div class="previews-item__author">Неизвестный автор</div>
-                            </div>
-                            <div class="previews-item__text">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть?</div>
+                        <div class="calculate__buttons">
+                            <div class="calculate__button js-button-number">1</div>
+                            <div class="calculate__button js-button-number">2</div>
+                            <div class="calculate__button js-button-number">3</div>
+                            <div class="calculate__button js-button-number">4</div>
+                            <div class="calculate__button js-button-number">5</div>
+                            <div class="calculate__button js-button-number">6</div>
+                            <div class="calculate__button js-button-number">7</div>
+                            <div class="calculate__button js-button-number">8</div>
+                            <div class="calculate__button js-button-number">9</div>
+                            <div class="calculate__button js-button-number">0</div>
+                            <div class="calculate__button js-button-apperand">*</div>
+                            <div class="calculate__button js-button-apperand">/</div>
+                            <div class="calculate__button js-button-apperand">-</div>
+                            <div class="calculate__button js-button-apperand">+</div>
+                            <div class="calculate__button js-button">=</div>
+                            <div class="calculate__button js-button-clear">Clear</div>
                         </div>
-                    </li>
-
-                    <li class="previews-item">
-                        <div class="previews-item__img">
-                            <img src="img/last-post2.jpg" alt="Девушка занимается йогой на пляже">
-                        </div>
-                        <div class="previews-item__content">
-                            <div class="previews-item__tags">
-                                <div class="previews-item__tag">
-                                    <a href="">Health</a>
-                                </div>
-                                <div class="previews-item__tag">
-                                    <a href="">Lifestyle</a>
-                                </div>
-                            </div>
-                            <div class="previews-item__title">
-                                <a href="">Йога для начинающих в домашних условиях</a>
-                            </div>
-                            <div class="previews-item__info">
-                                <div class="previews-item__date">10 июня 2019</div>
-                                <div class="previews-item__author">Неизвестный автор</div>
-                            </div>
-                            <div class="previews-item__text">Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой их того, что можно найти в шкафу</div>
-                        </div>
-                    </li>
-
-                    <li class="previews-item">
-                        <div class="previews-item__img">
-                            <img src="img/last-post3.jpg" alt="Девушка на концерте">
-                        </div>
-                        <div class="previews-item__content">
-                            <div class="previews-item__tags">
-                                <div class="previews-item__tag">
-                                    <a href="">Music</a>
-                                </div>
-                            </div>
-                            <div class="previews-item__title">
-                                <a href="">Лучшие музыкальные фестивали этого лета</a>
-                            </div>
-                            <div class="previews-item__info">
-                                <div class="previews-item__date">10 юиня 2019</div>
-                                <div class="previews-item__author">Неизвестный автор</div>
-                            </div>
-                            <div class="previews-item__text">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку? Мы составили список лучших фестивалей по всему миру</div>
-                        </div>
-                    </li>
-
-                    <li class="previews-item">
-                        <div class="previews-item__img">
-                            <img src="img/last-post4.jpg" alt="Блюда на столе">
-                        </div>
-                        <div class="previews-item__content">
-                            <div class="previews-item__tags">
-                                <div class="previews-item__tag">
-                                    <a href="">Lyfestyle</a>
-                                </div>
-                                <div class="previews-item__tag">
-                                    <a href="">Food</a>
-                                </div>
-                            </div>
-                            <div class="previews-item__title">
-                                <a href="">Наукоемкий подход к кулинарии</a>
-                            </div>
-                            <div class="previews-item__info">
-                                <div class="previews-item__date">10 июня 2019</div>
-                                <div class="previews-item__author">Неизвестный автор</div>
-                            </div>
-                            <div class="previews-item__text">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</div>
-                        </div>
-                    </li>
-
-                    <li class="previews-item">
-                        <div class="previews-item__img">
-                            <img src="img/last-post5.jpg" alt="Подушка на стуле">
-                        </div>
-                        <div class="previews-item__content">
-                            <div class="previews-item__tags">
-                                <div class="previews-item__tag">
-                                    <a href="">Lyfestyle</a>
-                                </div>
-                                <div class="previews-item__tag">
-                                    <a href="">Interior</a>
-                                </div>
-                                <div class="previews-item__tag">
-                                    <a href="">Art</a>
-                                </div>
-
-                            </div>
-                            <div class="previews-item__title">
-                                <a href="">Делаем модные принты на подушках для интерьера</a>
-                                </div>
-                            <div class="main__previews-item__info">
-                                <div class="previews-item__date">10 июня 2019 </div>
-                                <div class="previews-item__author">Неизвестный автор</div>
-                            </div>
-                            <div class="previews-item__text">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушки в химчистку</div>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Второстепенный контейнер -->
@@ -487,9 +331,6 @@
                 </div>
             </section>
         </div>
-        <div class="test">
-
-        </div>
                 <!-- товары -->
         <article class="products">
             <h2 class="products__title">Наши товары</h2>
@@ -563,70 +404,6 @@
                 </li>
             </ul>
         </article>
-        <!-- слайдер -->
-        <div class="text-slider">
-            <h2 class="text-slider__title">Вопросы и ответы</h2>
-            <div class="text-slider__container">
-                <div class="text-slider__item js-text-slider">
-                    <div class="text-slider__quetion-conteiner">
-                        <div class="text-slider__quetion">Как понять что ты спишь?</div>
-                        <div class="text-slider__button text-slider__button--first active js-text-button">
-                            <svg>
-                                <use href="./svg/triangledown_83849.svg#triangle"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="text-slider__answer text-slider__answer--first js-text-answer">Вы видете какую-то фигню</div>
-                </div>
-
-                <div class="text-slider__item js-text-slider">
-                    <div class="text-slider__quetion-conteiner">
-                        <div class="text-slider__quetion">Где купить варежки</div>
-                        <div class="text-slider__button js-text-button">
-                            <svg>
-                                <use href="./svg/triangledown_83849.svg#triangle"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="text-slider__answer js-text-answer">В магазине</div>
-                </div>
-            </div>
-            <div class="text-slider__item js-text-slider">
-                <div class="text-slider__quetion-conteiner">
-                    <div class="text-slider__quetion">Почему прогноз погоды такой не точный?</div>
-                    <div class="text-slider__button js-text-button">
-                        <svg>
-                            <use href="./svg/triangledown_83849.svg#triangle"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="text-slider__answer js-text-answer">Все погодные прогнозы делятся на сверхкраткосрочные, краткосрочные, среднесрочные, долгосрочные и сверхдолгосрочные. Чем более краткосрочнее прогноз, тем он точнее. Так, точность сверхкраткосрочного прогноза (до 12 часов) составляет около 95%, а сверхдолгосрочного (более чем на 3 месяца) – уже 50%, что делает его, в принципе, абсолютно бессмысленным.</div>
-            </div>
-        </div>
-        <!-- спойлер -->
-        <article class="spoiler js-spoiler">
-            <h2 class="spoiler__title">Наши лучшие фото</h2>
-            <button class="spoiler__button js-spoiler__button">
-                <div class="spoiler__text js-spoiler__text ">Развернуть</div>
-                <div class="spoiler__svg js-spoiler__svg">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
-                        <g>
-                          <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
-                        </g>
-                      </svg>
-                </div>
-            </button>
-            <div class="spoiler__content js-spoiler__holder">
-                <div class="spoiler__holder js-spoiler__content">
-                     <img src="/img/main12.jpeg" alt="Палатка и человек в горах на закате">
-                 </div>
-            </div>
-        </article>
-        <div class="video__wrapper">
-            <video class="video" autoplay muted loop src="/img/video1.mp4"></video>
-            <div class="video__title">Ждем вас снова</div>
-            <div class="vidoe__background"></div>
-        </div>
     </main>
 
     <!-- Футер -->
