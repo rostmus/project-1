@@ -15,9 +15,7 @@ class Calculate {
         this.apperand = null
 
     }
-    calculation() {
 
-    }
 
     //инициализация работы спойлера
     init() {

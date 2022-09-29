@@ -1,0 +1,42 @@
+.users {
+    &__button {
+        display: block;
+        border: 1px solid black;
+        padding: 10px 15px;
+        border-radius: 7px;
+        background: linear-gradient(white, gold);
+        font-weight: 700;
+        margin: 15px 0;
+        box-shadow: 5px 5px 3px black;
+        transition: all 0.3s;
+
+        @media(hover:hover) {
+            &:hover {
+                scale: 1.1;
+                box-shadow: 5px 5px 5px black;
+            }
+        }
+        &:active {
+            scale: 0.9;
+            background: linear-gradient(gold, white);
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px; 
+    }
+
+    &__item {
+        border: 2px solid gold;
+        padding: 10px;
+        border-radius: 5px;
+        width: calc(33% - 25px*2);
+    }
+
+}

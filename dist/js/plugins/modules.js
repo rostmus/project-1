@@ -34,9 +34,7 @@ class Calculate {
         this.apperand = null
 
     }
-    calculation() {
 
-    }
 
     //инициализация работы спойлера
     init() {
@@ -102,6 +100,32 @@ class Calculate {
     }
 }
 
+class GenerateUserList {
+    constructor(arr, element) {
+        this.self = element
+        this.data = arr
+        this.wrapper = this.self.querySelector('.js-users-wrapper')
+        this.name
+        this.email
+        this.username
+        this.element
+    }
+
+    greateElemenet() {
+        for (let i = 0; i < this.data.length; i++) {
+            this.name = this.data[i].name
+            this.email = this.data[i].email
+            this.username = this.data[i].username
+            this.initElement()
+            this.wrapper.insertAdjacentHTML('beforeend',this.element)
+            console.log(this.name, this.email, this.username)
+        }
+    }
+
+    initElement() {
+        this.element = `<div class="users__item"><div class="users__photo"></div><div class="users__name">Имя: ${this.name}</div><div class="users__username">Логин: ${this.username}</div><div class="users__mail">Почта: ${this.email}</div></div>`
+    }
+}
 // import {Tabs, SpoilerPlugin} from './modules.js'
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
@@ -242,3 +266,30 @@ class Tabs {
     }
 }
 
+
+(function() {
+    const urlUsers = 'https://jsonplaceholder.typicode.com/users';
+    let dataUser
+    function sendRequest(method, url, body =null) {
+        return fetch(url).then(response => {
+            if(response.ok) {
+                return  response.json()
+            }
+        })
+    }
+    
+    const buttonFetch = document.querySelector('.js-fetch-button');
+    buttonFetch.addEventListener('click', function() {
+        sendRequest('GET', urlUsers)
+        .then(data => {
+            dataUser = data
+            const element = document.querySelectorAll('.js-users')
+            element.forEach((el)=> {
+                const generator = new GenerateUserList(dataUser, el)
+                generator.greateElemenet()
+            })
+        })
+        .catch(err => console.log(err))
+        buttonFetch.classList.add('hidden')
+    })
+})();
