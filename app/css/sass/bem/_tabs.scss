@@ -11,8 +11,22 @@
         flex-direction: column;
     }
 
+    &-header {
+        display: none;
+        @media(max-width: $mobile-max) {
+            display: block;
+            padding: 10px;
+            border: 1px solid #d3c59d;
+        }
+    }
+
     &__themes {
         display: flex;
+        @media(max-width: $mobile-max) {
+            display: none;
+            flex-direction: column;
+            margin: 25px 0 0 0;
+        }
 
         & > .tabs__theme {
             flex-grow: 1;
@@ -20,6 +34,10 @@
 
         & > .tabs__theme:nth-child(1n +2) {
             margin-left: 25px;
+            @media(max-width: $mobile-max) {
+                margin-left: 0;
+
+            }
         }
         & > .tabs__theme:nth-child(1) {
             transform: translateX(1px);
@@ -36,6 +54,8 @@
         padding: 10px;
         cursor: pointer;
         background-color: white;
-
+        @media(max-width: $mobile-max) {
+            border: 1px solid ;
+        }
     }
 }
